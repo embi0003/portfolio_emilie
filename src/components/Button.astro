@@ -1,21 +1,24 @@
 ---
 // Henter parametrene fra Astro.props
-const { variant= "primary", size = "medium" } = Astro.props; 
+const { variant= "primary", size = "medium" } = Astro.props as {
+  variant?: string;
+  size?: string;
+};
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = "border-2 px-16 py-4"; 
+const buttonStyling = "border-2 px-16 py-4 transition-all duration-300";
  
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
-const variantClasses = {
-"primary": "border-black hover:bg-black hover:text-white hover:-skew-x-12 transition-all duration-700", /* border-primary-500 */
-"secondary": "border-blue-500 hover:bg-blue-500 hover:border-blue-200" /* border-secondary-500 */
+//Definer den styling (Tailwind classes, der gør sig gældende for de forskellige varianter 
+const variantClasses: Record<string, string> = {
+"primary": "border-border bg-dark text-white hover:bg-accent hover:border-accent hover:text-white",
+"secondary": "border-border bg-surface text-text hover:border-accent hover:text-accent"
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
-const sizeClasses = {
+const sizeClasses: Record<string, string> = {
 "large": "text-4xl",
 "medium": "text-xl",
-"small": "text-large"
+"small": "text-lg"
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
