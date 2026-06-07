@@ -1,30 +1,20 @@
 ---
 // Henter parametrene fra Astro.props
-const { htmlheading="h2", size="medium", font="sans", stylingclasses=""} = Astro.props as {
-  htmlheading?: string;
-  size?: string;
-  font?: string;
-  stylingclasses?: string;
-};
+const { htmlheading="h2", size="medium", font="sans", stylingclasses=""} = Astro.props; 
 const Htmlheading = htmlheading;
-const hasFontProp = Object.prototype.hasOwnProperty.call(Astro.props, "font");
-const defaultFont = htmlheading === "h1" ? "display" : "heading";
-
+ 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
-const sizeClasses: Record<string, string> = {
+const sizeClasses = {
 "large": "text-3xl lg:text-6xl",
 "medium": "text-2xl lg:text-3xl",
 "small": "text-xl",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige skrifttyper.
-const fontClasses: Record<string, string> = {
+const fontClasses = {
 "display": "font-display",
 "sans": "font-sans",
 "serif": "font-serif",
-"heading": "font-heading",
 };
-
-const fontKey = (hasFontProp ? font : defaultFont) as keyof typeof fontClasses;
 ---
-<Htmlheading class:list={[stylingclasses, sizeClasses[size], fontClasses[fontKey]]}><slot /></Htmlheading>
+<Htmlheading class:list={[stylingclasses, sizeClasses[size], fontClasses[font]]}><slot /></Htmlheading>
