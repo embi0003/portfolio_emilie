@@ -1,28 +1,29 @@
 ---
-// Henter parametrene fra Astro.props
-const { href="#", target="_self", variant= "textlink", size = "default" } = Astro.props as {
+interface Props {
   href?: string;
   target?: string;
-  variant?: string;
-  size?: string;
-};
+  variant?: "textlink" | "primary" | "secondary";
+  size?: "default" | "large" | "medium" | "small";
+}
+
+// Henter parametrene fra Astro.props
+const { href="#", target="_self", variant= "textlink", size = "default" } = Astro.props as Props; 
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
-const linkStyling = ""; 
- 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
-const variantClasses: Record<string, string> = {
+const linkStyling = "rounded-lg transition-all duration-300 font-semibold uppercase transform hover:scale-102"; 
+//Definer den styling (Tailwind classes, der gør sig gældende for de forskellige varianter 
+const variantClasses = {
 "textlink": "underline text-accent",
-"primary": "inline-block border-2 px-16 py-4 border-border text-text hover:border-accent hover:text-accent",
-"secondary": "inline-block border-2 px-16 py-4 border-border text-muted hover:border-accent hover:text-text"
+"primary": "inline-block border-2 px-8 py-4 border-accent bg-accent text-white hover:bg-accent-soft hover:text-accent",
+"secondary": "inline-block border-2 px-16 py-4 border-accent bg-accent-soft text-accent hover:bg-accent hover:text-white"
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
-const sizeClasses: Record<string, string> = {
-"default": "text-base", 
+const sizeClasses = {
+"default": "text-default", 
 "large": "text-4xl",
 "medium": "text-xl",
-"small": "text-lg"
+"small": "text-large"
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->

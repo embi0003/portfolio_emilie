@@ -6,12 +6,12 @@ const { variant= "primary", size = "medium" } = Astro.props as {
 };
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = "border-2 px-16 py-4 transition-all duration-300";
+const buttonStyling = "rounded-full border-2 px-16 py-4 transition-all duration-300 font-semibold transform hover:scale-105";
  
 //Definer den styling (Tailwind classes, der gør sig gældende for de forskellige varianter 
 const variantClasses: Record<string, string> = {
-"primary": "border-border bg-dark text-white hover:bg-accent hover:border-accent hover:text-white",
-"secondary": "border-border bg-surface text-text hover:border-accent hover:text-accent"
+"primary": "border-accent bg-accent text-white hover:bg-accent-soft hover:text-accent hover:border-accent",
+"secondary": "border-accent bg-accent-soft text-accent hover:bg-accent hover:text-white"
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
