@@ -5,11 +5,11 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
-import Divider from "../components/Divider.astro";
 import CvTimelineNew from "../components/CvTimelineNew.astro";
+import Kontakt from "../components/Kontakt.astro";
 ---
 <MainLayout title="Forside">
-	<main class="container mx-auto p-4">
+	<main class="container mx-auto px-4">
 		<Hero/>
 
 		<section class="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
@@ -29,7 +29,7 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
 							href="/projekter"
 							category="Design" 
 							title="Redesign af NGO'en Hjælp Din Næste"
-							description="Et komplet redesign af Hjælp Din Næstes hjemmeside med fokus på at forbedre den visuelle identitet og navigationen. Afsluttende eksamensprojekt på multimediedesign."
+							description="Et komplet redesign af Hjælp Din Næstes hjemmeside med fokus på at forbedre den visuelle identitet og navigationen. Afsluttende eksamensprojekt på multimediedesigneruddannelsen."
 							class="intersect:animate-fade-left animate-once animate-duration-[1500ms]"
 							linkText="Læs mere"
 							linkHref="/projekter"
@@ -49,7 +49,7 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
 							href="/projekter"
 							category="Kommunikation" 
 							title="Minikampagne for Digitaliseringsstyrelsen"
-							description="En minikampagne målrettet Facebook og Instagram med fokus på at øge engagementet på Digitaliseeringsstyrelsens kanaler."
+							description="En minikampagne målrettet Facebook og Instagram med fokus på at øge engagementet på Digitaliseringsstyrelsens kanaler."
 							class="intersect:animate-fade-left animate-once animate-duration-[1500ms]"
 							linkText="Læs mere"
 							linkHref="/projekter"
@@ -64,10 +64,8 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
 			</div>
 		</section>
 
-		<CvTimelineNew />
-
-		<section class="py-12 md:py-24 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
-			<div class="max-w-4xl mx-auto px-4 md:px-0">
+		<section class="py-12 md:py-16 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+			<div class="max-w-6xl mx-auto px-4 md:px-0">
 				<div class="mb-10">
 					<Heading htmlheading="h2" size="medium" font="sans" stylingclasses="uppercase tracking-[0.3em] text-2xl md:text-3xl mb-4">
 						Mød mig her
@@ -86,10 +84,15 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
 			</div>
 		</section>
 
-<Divider
-width="w-156"
-height
-/>
+<CvTimelineNew />
+
+<Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>	
 
 	</main>
 

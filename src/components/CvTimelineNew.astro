@@ -1,128 +1,127 @@
 ---
-const {
-  items = [
-    {
-      date: "Jan 26",
-      company: "Digitalt bureau",
-      role: "Junior digital designer",
-      description:
-        "Arbejdede med kampagner, sociale medier og visuel storytelling for kunder i kultur- og livsstilssektoren."
-    },
-    {
-      date: "Aug 25",
-      company: "Nyhedsredaktion",
-      role: "Journalistisk assistent",
-      description:
-        "Producerede artikler, lavede research og deltog i redaktionens daglige nyhedsflow."
-    },
-    {
-      date: "Maj 24",
-      company: "Marketing startup",
-      role: "Kommunikationspraktikant",
-      description:
-        "Støttede udviklingen af content- og brandingmateriale til virksomhedens sociale platforme."
-    },
-    {
-      date: "Nov 23",
-      company: "Kreativt studio",
-      role: "Grafisk designpraktikant",
-      description:
-        "Designede visuelle layouts, printmaterialer og digitale assets til kunder i rejsebranchen."
-    },
-    {
-      date: "Jun 23",
-      company: "Skoleprojekt",
-      role: "Projektleder",
-      description:
-        "Ledede et team på 4 personer i et digitalt kampagneprojekt med fokus på brugeroplevelse og visuelt design."
-    },
-    {
-      date: "Feb 22",
-      company: "Studiejob",
-      role: "Indholdsassistent",
-      description:
-        "Skrev nyhedsbreve, opdaterede sociale kanaler og optimerede tekst til digitale kampagner."
-    }
-  ],
-  sectionTitle = "Mit CV på tidslinje",
-  sectionText = "Swipe eller brug pilene for at navigere i min erfaring."
-} = Astro.props;
+import Heading from "../components/Heading.astro";
+import Link from "../components/Link.astro";
 
-const id = `timeline-${Math.random().toString(36).slice(2)}`;
+type CvTimelineItem = {
+  date: string;
+  company: string;
+  role: string;
+  description: string;
+};
+
+interface Props {
+  items?: CvTimelineItem[];
+  sectionText?: string;
+}
+
+const defaultItems: CvTimelineItem[] = [
+  {
+    date: "2024-2026",
+    company: "Digitaliseringsstyrelsen",
+    role: "Studentermedhjælper",
+    description:
+      "I web- og kommunikationsteamet arbejdede jeg med sociale medier, brugertests, intern kommunikation og video."
+  },
+  {
+    date: "2023-2024",
+    company: "Think PR",
+    role: "Journalist og kommunikationsrådgiver",
+    description:
+      "Producerede debatindlæg, pressemeddelelser, lavede SoMe og podcast"
+  },
+  {
+    date: "2022-2023",
+    company: "KNR - Kalaallit Nunaata Radioa",
+    role: "Journalist og radiovært",
+    description:
+      "Jeg lavede radioindslag, skrev nyheder og var vært på radioavisen."
+  },
+  {
+    date: "2022",
+    company: "Kristeligt Dagblad",
+    role: "SoMe-studentermedhjælper",
+    description:
+      "Planlagde opslag til Facebook og Instagram."
+  },
+  {
+    date: "2024-2026",
+    company: "Erhvervsakademi København",
+    role: "Studerende, multimediedesign",
+    description:
+      "Multimediedesign med fokus på digitalt design."
+  },
+  {
+    date: "2018-2022",
+    company: "Syddansk Universitet",
+    role: "BA i journalistik",
+    description:
+      "Bachelor i journalistik i Odense."
+  }
+];
+
+const props = Astro.props as Props;
+const items = props.items ?? defaultItems;
+
+// 🔁 triple items for smooth infinite loop
+const loopItems = [...items, ...items, ...items];
+
+const sectionText = props.sectionText ?? "";
 ---
 
-<section class="py-20 md:py-28 bg-bg intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+<section class="py-12 md:py-18 bg-bg">
   <div class="container mx-auto px-4 max-w-7xl">
 
-    <!-- HEADER (mere luft + større impact) -->
-    <div class="mb-10 md:mb-14 text-center">
-      <h2 class="font-heading uppercase tracking-[0.35em] text-2xl md:text-4xl text-text">
-        {sectionTitle}
-      </h2>
-      <p class="mt-5 text-muted text-base md:text-lg max-w-3xl mx-auto leading-7">
+    <!-- HEADER -->
+    <div class="mb-8 text-left">
+      <Heading
+        htmlheading="h2"
+        size="medium"
+        font="sans"
+        stylingclasses="uppercase tracking-[0.35em] text-3xl md:text-4xl text-text"
+      >
+        Udsnit af erfaring
+      </Heading>
+
+      <p class="mt-5 text-muted text-base md:text-lg max-w-3xl leading-7">
         {sectionText}
       </p>
     </div>
 
-    <!-- WRAPPER (mere “block”) -->
-    <div class="relative overflow-hidden rounded-[3rem] border border-border bg-surface px-5 py-10 md:px-10 md:py-14">
+    <!-- WRAPPER -->
+    <div class="relative">
 
-      <!-- FADE -->
-      <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-surface to-transparent z-10"></div>
-      <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-surface to-transparent z-10"></div>
-
-      <!-- LABEL -->
-      <div class="mb-6 flex justify-between">
-        <p class="text-[11px] uppercase tracking-[0.4em] text-muted">Erfaring</p>
-        <p class="text-[11px] uppercase tracking-[0.4em] text-muted md:hidden">Swipe</p>
-      </div>
-
-      <!-- LEFT -->
-      <button
-        type="button"
-        class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 h-12 w-12 items-center justify-center rounded-full border border-border bg-white shadow-sm hover:bg-accent hover:text-white transition"
-        onclick={"document.getElementById('" + id + "').scrollBy({ left: -document.querySelector('#" + id + " article').offsetWidth, behavior: 'smooth' })"}
-      >
-        ‹
-      </button>
-
-      <!-- SCROLL -->
+      <!-- SCROLL CONTAINER -->
       <div
-        id={id}
-        class="timeline-scroll flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
+        id="timeline"
+        class="timeline-scroll flex gap-10 md:gap-16 overflow-x-auto scroll-smooth snap-x snap-mandatory py-10 px-6 md:px-10"
       >
 
-        {items.map((item) => (
-          <article class="snap-start flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+        {loopItems.map((item) => (
+          <article class="snap-start flex-shrink-0 w-[88%] sm:w-1/2 lg:w-1/3">
 
-            <div class="relative rounded-[2.5rem] border border-border bg-white p-6 md:p-8 shadow-sm h-[420px] flex flex-col">
+            <div class="text-left">
+              <p class="text-xs uppercase tracking-[0.35em] text-muted">
+                {item.date}
+              </p>
 
-              <!-- TOP -->
-              <div class="text-center">
-                <p class="text-[11px] uppercase tracking-[0.4em] text-muted">
-                  {item.date}
-                </p>
-                <p class="mt-3 text-lg font-semibold text-text">
-                  {item.company}
-                </p>
-              </div>
+              <p class="mt-2 text-lg font-medium text-text">
+                {item.company}
+              </p>
+            </div>
 
-              <!-- LINE -->
-              <div class="relative my-6">
-                <div class="h-[2px] bg-border w-full"></div>
-                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-accent border-2 border-white shadow"></div>
-              </div>
+            <div class="relative my-6">
+              <div class="h-px bg-border w-full"></div>
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-accent"></div>
+            </div>
 
-              <!-- CONTENT -->
-              <div class="flex-1 rounded-[1.8rem] bg-surface border border-border p-5">
-                <p class="text-[12px] uppercase tracking-[0.25em] text-accent font-semibold">
-                  {item.role}
-                </p>
-                <p class="mt-4 text-text leading-7 text-sm md:text-base">
-                  {item.description}
-                </p>
-              </div>
+            <div class="text-left">
+              <p class="text-sm uppercase tracking-[0.2em] text-accent font-medium">
+                {item.role}
+              </p>
 
+              <p class="mt-3 text-sm md:text-base text-text opacity-80 leading-7">
+                {item.description}
+              </p>
             </div>
 
           </article>
@@ -130,16 +129,88 @@ const id = `timeline-${Math.random().toString(36).slice(2)}`;
 
       </div>
 
-      <!-- RIGHT -->
+      <!-- JS -->
+      <script is:inline>
+        const el = document.getElementById("timeline");
+
+        let isPaused = false;
+
+        function scroll(dir) {
+          if (!el) return;
+
+          const card = el.querySelector("article");
+          const gap = 40;
+          const width = card?.offsetWidth ?? el.offsetWidth * 0.8;
+
+          el.scrollBy({ left: dir * (width + gap), behavior: "smooth" });
+        }
+
+        window.scrollTimeline = scroll;
+
+        function initPosition() {
+          if (!el) return;
+          const third = el.scrollWidth / 3;
+          el.scrollLeft = third;
+        }
+
+        initPosition();
+
+        let speed = 0.6;
+
+        function autoScroll() {
+          if (!el || isPaused) return;
+
+          el.scrollLeft += speed;
+
+          const max = el.scrollWidth / 3;
+
+          if (el.scrollLeft >= max * 2) {
+            el.scrollLeft = max;
+          }
+
+          if (el.scrollLeft <= 0) {
+            el.scrollLeft = max;
+          }
+
+          requestAnimationFrame(autoScroll);
+        }
+
+        autoScroll();
+
+        el.addEventListener("mouseenter", () => (isPaused = true));
+        el.addEventListener("mouseleave", () => (isPaused = false));
+      </script>
+
+      <!-- DESKTOP ARROWS (ONLY) -->
       <button
         type="button"
-        class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 h-12 w-12 items-center justify-center rounded-full border border-border bg-white shadow-sm hover:bg-accent hover:text-white transition"
-        onclick={"document.getElementById('" + id + "').scrollBy({ left: document.querySelector('#" + id + " article').offsetWidth, behavior: 'smooth' })"}
+        class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 text-3xl text-text hover:text-accent"
+        onclick="scrollTimeline(-1)"
+      >
+        ‹
+      </button>
+
+      <button
+        type="button"
+        class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 text-3xl text-text hover:text-accent"
+        onclick="scrollTimeline(1)"
       >
         ›
       </button>
 
+      <!-- FADE -->
+      <div class="pointer-events-none hidden md:block absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-bg to-transparent"></div>
+      <div class="pointer-events-none hidden md:block absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-bg to-transparent"></div>
+
     </div>
+
+    <!-- CTA -->
+    <div class="mt-4 md:mt-10 flex justify-center">
+      <Link href="#" variant="primary" size="small">
+        Se og download mit CV
+      </Link>
+    </div>
+
   </div>
 </section>
 
@@ -147,6 +218,8 @@ const id = `timeline-${Math.random().toString(36).slice(2)}`;
 .timeline-scroll {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 .timeline-scroll::-webkit-scrollbar {

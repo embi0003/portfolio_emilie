@@ -1,0 +1,60 @@
+---
+import Link from "../components/Link.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+
+interface Props {
+  title?: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  imageSrc?: string;
+}
+
+const {
+  title = "Skal vi tage en kop kaffe?",
+  text = "Hvis du tænker “det her føles faktisk ret rigtigt”, så har du nok ret. Jeg er altid klar på kaffe, idéer og gode snakke om alt det kreative, der ender med noget fedt.",
+  ctaLabel = "Skriv til mig",
+  ctaHref = "/kontakt",
+  imageSrc = "/img/telefon.webp"
+} = Astro.props as Props;
+---
+
+<!-- FULL WIDTH SECTION -->
+<section class="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+  
+  <div class="mx-auto max-w-4xl px-5 text-center">
+
+    <!-- PHONE -->
+    <div class="flex justify-center mb-6 md:mb-8">
+      <div class="relative">
+        <img
+          src={imageSrc}
+          alt="Telefon illustration"
+          class="w-16 md:w-20 drop-shadow-md"
+        />
+
+        <!-- glow -->
+        <div class="absolute inset-0 blur-2xl bg-accent/20 rounded-full scale-110 -z-10"></div>
+      </div>
+    </div>
+
+    <!-- TITLE -->
+    <Heading htmlheading="h2" size="medium" font="sans" stylingclasses="text-2xl md:text-4xl text-text tracking-tight">
+      {title}
+    </Heading>
+
+    <!-- TEXT -->
+    <Text stylingclasses="mt-4 md:mt-5 text-sm md:text-base text-muted leading-7 max-w-2xl mx-auto">
+      {text}
+    </Text>
+
+    <!-- CTA -->
+    <div class="mt-8 md:mt-10 flex justify-center">
+      <Link href={ctaHref} variant="primary" size="small">
+        {ctaLabel}
+      </Link>
+    </div>
+
+  </div>
+</section>
