@@ -48,7 +48,7 @@ const defaultItems: CvTimelineItem[] = [
     company: "Erhvervsakademi København",
     role: "Studerende, multimediedesign",
     description:
-      "Multimediedesign med fokus på digitalt design."
+      "Multimediedesign med valgfag i digitalt design."
   },
   {
     date: "2018-2022",
@@ -68,7 +68,7 @@ const loopItems = [...items, ...items, ...items];
 const sectionText = props.sectionText ?? "";
 ---
 
-<section class="py-12 md:py-18 bg-bg">
+<section class="py-12 md:py-18 bg-bg intersect:animate-fade-right animate-once animate-duration-[1500ms]">
   <div class="container mx-auto px-4 max-w-7xl">
 
     <!-- HEADER -->

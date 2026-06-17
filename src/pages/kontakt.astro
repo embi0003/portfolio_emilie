@@ -1,1 +1,76 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 
+interface Props {
+  title?: string;
+  text?: string;
+  email?: string;
+  phone?: string;
+  imageSrc?: string;
+}
+
+const {
+  title = "Lad os skabe noget sammen",
+  text = "Hvis du er landet her, er det nok ikke helt tilfældigt. Jeg er altid åben for nye projekter, samarbejder eller en god snak om idéer, der kan blive ført ud i livet.",
+  email = "esc070299@gmail.com",
+  phone = "+45 22 46 68 13",
+  imageSrc = "/img/telefon.webp"
+} = Astro.props as Props;
+---
+
+<MainLayout title="Kontakt">
+  <main class="container mx-auto px-4">
+
+    <section class="py-24 md:py-20">
+
+      <div class="max-w-2xl mx-auto text-center">
+
+        <!-- IMAGE -->
+        <div class="flex justify-center mb-8">
+          <div class="relative">
+            <img
+              src={imageSrc}
+              alt="Telefon illustration"
+              class="w-24 md:w-28 drop-shadow-md"
+            />
+            <div class="absolute inset-0 blur-2xl bg-accent/10 rounded-full scale-110 -z-10"></div>
+          </div>
+        </div>
+
+        <!-- TITLE -->
+        <Heading
+          htmlheading="h1"
+          size="medium"
+          font="sans"
+          stylingclasses="text-3xl md:text-5xl text-text tracking-tight"
+        >
+          {title}
+        </Heading>
+
+        <!-- TEXT -->
+        <Text stylingclasses="mt-6 text-sm md:text-base text-muted leading-7">
+          {text}
+        </Text>
+
+        <!-- CONTACT INFO -->
+        <div class="mt-10 space-y-3 text-text text-sm md:text-base">
+          <a href={`mailto:${email}`} class="block hover:text-accent transition">
+            {email}
+          </a>
+
+          <a href={`tel:${phone}`} class="block hover:text-accent transition">
+            {phone}
+          </a>
+        </div>
+
+    
+
+      </div>
+
+    </section>
+
+  </main>
+</MainLayout>

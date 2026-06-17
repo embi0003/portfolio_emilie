@@ -1,31 +1,83 @@
-<header class="border-2 border-border bg-bg">
+<header class="border-2 border-border bg-bg relative">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-    <a href="#" class="font-display text-2xl font-bold uppercase tracking-wide text-text hover:text-accent">Emilie Rose</a>
 
-    <div class="sm:hidden">
+    <!-- LOGO -->
+    <a
+      href="/"
+      class="font-display text-2xl font-bold uppercase tracking-wide text-text hover:text-accent"
+    >
+      Emilie Rose
+    </a>
+
+    <!-- MOBILE MENU -->
+    <div class="sm:hidden relative">
+
       <input id="nav-toggle" type="checkbox" class="peer sr-only" />
-      <label for="nav-toggle" class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-md border border-border text-text hover:text-accent">
+
+      <!-- BURGER -->
+      <label
+        for="nav-toggle"
+        class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-md border border-border text-text hover:text-accent"
+      >
         <span class="sr-only">Åbn menu</span>
+
         <span class="block h-0.5 w-6 bg-current transition duration-300 peer-checked:rotate-45 peer-checked:translate-y-1"></span>
         <span class="block h-0.5 w-6 bg-current my-1 transition duration-300 peer-checked:opacity-0"></span>
         <span class="block h-0.5 w-6 bg-current transition duration-300 peer-checked:-rotate-45 peer-checked:-translate-y-1"></span>
       </label>
+
+      <!-- DROPDOWN -->
       <nav class="absolute left-0 right-0 top-full z-10 hidden rounded-b-xl border border-border bg-surface p-4 text-lg font-heading text-text shadow-sm peer-checked:flex">
         <ul class="flex flex-col gap-3">
-          <li><a href="#projekter" class="block hover:text-accent transition">Projekter</a></li>
-          <li><a href="#om-mig" class="block hover:text-accent transition">Om mig</a></li>
-          <li><a href="#kontakt" class="block hover:text-accent transition">Kontakt</a></li>
-          <li><a href="#skriv" class="block hover:text-accent transition">Skriv</a></li>
+
+          <li>
+            <a href="/projekter" class="block hover:text-accent transition">
+              Projekter
+            </a>
+          </li>
+
+          <li>
+            <a href="/om_mig" class="block hover:text-accent transition">
+              Om mig
+            </a>
+          </li>
+
+          <li>
+            <a href="/kontakt" class="block hover:text-accent transition">
+              Kontakt
+            </a>
+          </li>
+
+
         </ul>
       </nav>
+
     </div>
 
+    <!-- DESKTOP MENU -->
     <nav class="hidden sm:block">
       <ul class="flex items-center gap-6 text-lg font-heading uppercase tracking-[0.1em] text-text">
-        <li><a href="#projekter" class="hover:text-accent transition">Projekter</a></li>
-        <li><a href="#om-mig" class="hover:text-accent transition">Om mig</a></li>
-        <li><a href="#kontakt" class="hover:text-accent transition">Kontakt</a></li>
+
+        <li>
+          <a href="/projekter" class="hover:text-accent transition">
+            Projekter
+          </a>
+        </li>
+
+        <li>
+          <a href="/om-mig" class="hover:text-accent transition">
+            Om mig
+          </a>
+        </li>
+
+        <li>
+          <a href="/kontakt" class="hover:text-accent transition">
+            Kontakt
+          </a>
+        </li>
+
       </ul>
     </nav>
+
   </div>
 </header>
