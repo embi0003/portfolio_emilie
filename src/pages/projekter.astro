@@ -1,0 +1,187 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Deler from "../components/Deler.astro";
+import Kontakt from "../components/Kontakt.astro";
+---
+
+<MainLayout title="Projekter">
+
+  <main>
+
+    <!-- HERO -->
+
+<section class="relative py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <Heading
+      htmlheading="h1"
+      size="large"
+      font="sans"
+      stylingclasses="uppercase tracking-[0.3em] text-text"
+    >
+      Projekter
+    </Heading>
+
+    <Text stylingclasses="max-w-3xl text-text leading-7">
+      Her finder du et udvalg af projekter inden for journalistik,
+      kommunikation, sociale medier og digitalt design.
+      Klik på et projekt for at se processen, løsningen og resultatet.
+    </Text>
+
+    <!-- Accent line - hidden on mobile -->
+    <div class="relative mt-8 hidden md:block">
+      <div
+        class="h-2 w-[40vw] bg-accent intersect:animate-fade-right animate-once animate-duration-[1500ms]"
+      ></div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- SOME & JOURNALISTIK -->
+    <section class="pb-20 md:pb-28">
+
+      <div class="max-w-6xl mx-auto px-4">
+
+        <Heading
+          htmlheading="h2"
+          size="medium"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.25em] mb-8"
+        >
+          SoMe & journalistik
+        </Heading>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <ProjectCard
+            href="/projekter/projekt-1"
+            image="/img/jordemoder.webp"
+            category="Journalistik"
+            title="Artikelserie om gynækologiske undersøgelser for Femina"
+          />
+
+          <ProjectCard
+            href="/projekter/projekt-2"
+            image="/img/digst.webp"
+            category="SoMe"
+            title="Minikampagne for Digitaliseringsstyrelsen"
+          />
+
+          <ProjectCard
+            href="/projekter/projekt-3"
+            image="/img/knr.webp"
+            category="Journalistik"
+            title="Radiovært i Grønland"
+          />
+
+          <ProjectCard
+            href="/projekter/projekt-4"
+            image="/img/fodtennis.webp"
+            category="SoMe"
+            title="Instagram-serie for Fodtennis Danmark"
+          />
+
+          <ProjectCard
+            href="/projekter/design-2"
+            image="/img/julie.webp"
+            category="Journalistik"
+            title="Portræt af Julie Rubow"
+          />
+
+          <ProjectCard
+            href="/projekter/projekt-6"
+            image="/img/podcast.webp"
+            category="Podcast"
+            title="Think About It"
+          />
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DIGITALT DESIGN -->
+    <section class="pb-24 md:pb-32">
+
+      <div class="max-w-6xl mx-auto px-4">
+
+        <Heading
+          htmlheading="h2"
+          size="medium"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.25em] mb-8"
+        >
+          Digitalt design & kommunikation
+        </Heading>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <ProjectCard
+            href="/projekter/design-1"
+            image="/img/hdn.webp"
+            category="UX/UI"
+            title="Redesign af Hjælp Din Næste"
+          />
+
+          <ProjectCard
+            href="/projekter/design-3"
+            image="/img/bakkefest.webp"
+            category="UX/UI"
+            title="Redesign af Bakkefest"
+          />
+
+          <ProjectCard
+            href="/projekter/design-4"
+            image="/img/bornebiffen.webp"
+            category="UX/UI"
+            title="Redesign af Børnebiffen"
+          />
+
+          <ProjectCard
+            href="/projekter/design-5"
+            image="/img/hojskolen.webp"
+            category="UX/UI"
+            title="Redesign af Höjskolendk"
+          />
+
+          <ProjectCard
+            href="/projekter/design-6"
+            image="/img/altid.webp"
+            category="Kampagne"
+            title="AltID-kampagne for Digitaliseringsstyrelsen"
+          />
+
+           <ProjectCard
+            href="/projekter/projekt-5"
+            image="/img/pressemeddelelse.webp"
+            category="Kommunikation"
+            title="Pressemeddelelse for Le Mans og Lego"
+          />
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <Deler ws="m" />
+
+    <Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>
+
+  </main>
+
+</MainLayout>
