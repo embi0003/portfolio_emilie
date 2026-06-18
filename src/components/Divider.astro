@@ -1,0 +1,19 @@
+---
+const { 
+  width = "w-24", 
+  height = "h-1", 
+  color = "bg-accent", 
+  class: className = "",
+  animation = ""
+} = Astro.props as {
+  width?: string;
+  height?: string;
+  color?: string;
+  class?: string;
+  animation?: string;
+};
+
+const dividerClasses = "block mx-auto transition-all duration-300";
+---
+
+<div class:list={[dividerClasses, width, height, color, className, animation]} />

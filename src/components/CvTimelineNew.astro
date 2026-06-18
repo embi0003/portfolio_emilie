@@ -1,0 +1,228 @@
+---
+import Heading from "../components/Heading.astro";
+import Link from "../components/Link.astro";
+
+type CvTimelineItem = {
+  date: string;
+  company: string;
+  role: string;
+  description: string;
+};
+
+interface Props {
+  items?: CvTimelineItem[];
+  sectionText?: string;
+}
+
+const defaultItems: CvTimelineItem[] = [
+  {
+    date: "2024-2026",
+    company: "Digitaliseringsstyrelsen",
+    role: "Studentermedhjælper",
+    description:
+      "I web- og kommunikationsteamet arbejdede jeg med sociale medier, brugertests, intern kommunikation og video."
+  },
+  {
+    date: "2023-2024",
+    company: "Think PR",
+    role: "Journalist og kommunikationsrådgiver",
+    description:
+      "Producerede debatindlæg, pressemeddelelser, lavede SoMe og podcast"
+  },
+  {
+    date: "2022-2023",
+    company: "KNR - Kalaallit Nunaata Radioa",
+    role: "Journalist og radiovært",
+    description:
+      "Jeg lavede radioindslag, skrev nyheder og var vært på radioavisen."
+  },
+  {
+    date: "2022",
+    company: "Kristeligt Dagblad",
+    role: "SoMe-studentermedhjælper",
+    description:
+      "Planlagde opslag til Facebook og Instagram."
+  },
+  {
+    date: "2024-2026",
+    company: "Erhvervsakademi København",
+    role: "Studerende, multimediedesign",
+    description:
+      "Multimediedesign med valgfag i digitalt design."
+  },
+  {
+    date: "2018-2022",
+    company: "Syddansk Universitet",
+    role: "BA i journalistik",
+    description:
+      "Bachelor i journalistik i Odense."
+  }
+];
+
+const props = Astro.props as Props;
+const items = props.items ?? defaultItems;
+
+// 🔁 triple items for smooth infinite loop
+const loopItems = [...items, ...items, ...items];
+
+const sectionText = props.sectionText ?? "";
+---
+
+<section class="py-12 md:py-18 bg-bg intersect:animate-fade-right animate-once animate-duration-[1500ms]">
+  <div class="container mx-auto px-4 max-w-7xl">
+
+    <!-- HEADER -->
+    <div class="mb-8 text-left">
+      <Heading
+        htmlheading="h2"
+        size="medium"
+        font="sans"
+        stylingclasses="uppercase tracking-[0.35em] text-3xl md:text-4xl text-text"
+      >
+        Udsnit af erfaring
+      </Heading>
+
+      <p class="mt-5 text-muted text-base md:text-lg max-w-3xl leading-7">
+        {sectionText}
+      </p>
+    </div>
+
+    <!-- WRAPPER -->
+    <div class="relative">
+
+      <!-- SCROLL CONTAINER -->
+      <div
+        id="timeline"
+        class="timeline-scroll flex gap-10 md:gap-16 overflow-x-auto scroll-smooth snap-x snap-mandatory py-10 px-6 md:px-10"
+      >
+
+        {loopItems.map((item) => (
+          <article class="snap-start flex-shrink-0 w-[88%] sm:w-1/2 lg:w-1/3">
+
+            <div class="text-left">
+              <p class="text-xs uppercase tracking-[0.35em] text-muted">
+                {item.date}
+              </p>
+
+              <p class="mt-2 text-lg font-medium text-text">
+                {item.company}
+              </p>
+            </div>
+
+            <div class="relative my-6">
+              <div class="h-px bg-border w-full"></div>
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-accent"></div>
+            </div>
+
+            <div class="text-left">
+              <p class="text-sm uppercase tracking-[0.2em] text-accent font-medium">
+                {item.role}
+              </p>
+
+              <p class="mt-3 text-sm md:text-base text-text opacity-80 leading-7">
+                {item.description}
+              </p>
+            </div>
+
+          </article>
+        ))}
+
+      </div>
+
+      <!-- JS -->
+      <script is:inline>
+        const el = document.getElementById("timeline");
+
+        let isPaused = false;
+
+        function scroll(dir) {
+          if (!el) return;
+
+          const card = el.querySelector("article");
+          const gap = 40;
+          const width = card?.offsetWidth ?? el.offsetWidth * 0.8;
+
+          el.scrollBy({ left: dir * (width + gap), behavior: "smooth" });
+        }
+
+        window.scrollTimeline = scroll;
+
+        function initPosition() {
+          if (!el) return;
+          const third = el.scrollWidth / 3;
+          el.scrollLeft = third;
+        }
+
+        initPosition();
+
+        let speed = 0.6;
+
+        function autoScroll() {
+          if (!el || isPaused) return;
+
+          el.scrollLeft += speed;
+
+          const max = el.scrollWidth / 3;
+
+          if (el.scrollLeft >= max * 2) {
+            el.scrollLeft = max;
+          }
+
+          if (el.scrollLeft <= 0) {
+            el.scrollLeft = max;
+          }
+
+          requestAnimationFrame(autoScroll);
+        }
+
+        autoScroll();
+
+        el.addEventListener("mouseenter", () => (isPaused = true));
+        el.addEventListener("mouseleave", () => (isPaused = false));
+      </script>
+
+      <!-- DESKTOP ARROWS (ONLY) -->
+      <button
+        type="button"
+        class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 text-3xl text-text hover:text-accent"
+        onclick="scrollTimeline(-1)"
+      >
+        ‹
+      </button>
+
+      <button
+        type="button"
+        class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 text-3xl text-text hover:text-accent"
+        onclick="scrollTimeline(1)"
+      >
+        ›
+      </button>
+
+      <!-- FADE -->
+      <div class="pointer-events-none hidden md:block absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-bg to-transparent"></div>
+      <div class="pointer-events-none hidden md:block absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-bg to-transparent"></div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-4 md:mt-10 flex justify-center">
+      <Link href="#" variant="primary" size="small">
+        Se og download mit CV
+      </Link>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.timeline-scroll {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  display: none;
+}
+</style>

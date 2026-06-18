@@ -1,0 +1,67 @@
+---
+const { category = "", title = "", description = "", href = "", class: className = "", linkText = "", linkHref = "" } = Astro.props as {
+  category?: string;
+  title?: string;
+  description?: string;
+  href?: string;
+  class?: string;
+  linkText?: string;
+  linkHref?: string;
+};
+
+const cardClasses = "group block rounded-[2rem] border border-border bg-surface p-6 transition-transform duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg flex flex-col h-full";
+---
+
+{href ? (
+  <a href={href} class:list={[cardClasses, className, "no-underline"]}>
+    <div>
+      {category && (
+        <p class="text-accent uppercase text-sm tracking-[0.3em] mb-4">
+          {category}
+        </p>
+      )}
+      {title && (
+        <h3 class="text-2xl font-heading font-semibold mb-3">
+          {title}
+        </h3>
+      )}
+      {description && (
+        <p class="text-base leading-7 text-text mb-4">
+          {description}
+        </p>
+      )}
+    </div>
+    {linkText && (
+      <p class="text-accent underline mt-auto">
+        {linkText}
+      </p>
+    )}
+    <slot />
+  </a>
+) : (
+  <article class:list={[cardClasses, className]}>
+    <div>
+      {category && (
+        <p class="text-accent uppercase text-sm tracking-[0.3em] mb-4">
+          {category}
+        </p>
+      )}
+      {title && (
+        <h3 class="text-2xl font-heading font-semibold mb-3">
+          {title}
+        </h3>
+      )}
+      {description && (
+        <p class="text-base leading-7 text-text mb-4">
+          {description}
+        </p>
+      )}
+    </div>
+    {linkText && linkHref && (
+      <a href={linkHref} class="text-accent underline hover:text-accent-soft transition-colors mt-auto">
+        {linkText}
+      </a>
+    )}
+    <slot />
+  </article>
+)}

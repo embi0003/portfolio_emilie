@@ -1,0 +1,130 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+---
+
+<MainLayout title="Om mig">
+  <main class="container mx-auto px-4">
+
+    <!-- HERO -->
+    <section class="py-20 md:py-28">
+
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+
+        <!-- TEXT -->
+        <div>
+
+          <Heading
+            htmlheading="h1"
+            size="medium"
+            font="sans"
+            stylingclasses="text-3xl md:text-5xl text-text tracking-tight"
+          >
+            Hej, jeg er Emilie
+          </Heading>
+
+          <Text stylingclasses="mt-6 text-sm md:text-base text-muted leading-7">
+            Jeg arbejder i krydsfeltet mellem journalistik, kommunikation og digitalt design. 
+            Jeg elsker at gøre idéer enkle, visuelle og levende — og finde den historie, der faktisk rammer nogen.
+          </Text>
+
+          <Text stylingclasses="mt-4 text-sm md:text-base text-muted leading-7">
+            Jeg trives i projekter, hvor der er plads til både kreativitet og retning — og hvor man tør eksperimentere lidt undervejs.
+          </Text>
+
+        </div>
+
+        <!-- IMAGE -->
+        <div class="flex justify-center md:justify-end">
+          <div class="relative">
+
+            <img
+              src="/img/om-mig.webp"
+              alt="Portræt"
+              class="w-56 md:w-72 rounded-2xl shadow-md"
+            />
+
+            <div class="absolute inset-0 blur-2xl bg-accent/10 rounded-2xl scale-105 -z-10"></div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- COMPETENCER -->
+    <section class="py-16 md:py-20 border-t border-border">
+
+      <div class="max-w-5xl mx-auto">
+
+        <Heading
+          htmlheading="h2"
+          size="medium"
+          font="sans"
+          stylingclasses="text-2xl md:text-3xl text-text"
+        >
+          Det jeg arbejder med
+        </Heading>
+
+        <Text stylingclasses="mt-4 text-muted text-sm md:text-base max-w-2xl">
+          Jeg bevæger mig mellem indhold, idé og design — og kan både tænke strategisk og producere hands-on.
+        </Text>
+
+        <!-- SKILLS -->
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+          <div class="p-5 border border-border rounded-xl bg-surface">
+            <h3 class="font-heading text-text mb-2">Kommunikation</h3>
+            <p class="text-sm text-muted">Storytelling, kampagner og sociale medier.</p>
+          </div>
+
+          <div class="p-5 border border-border rounded-xl bg-surface">
+            <h3 class="font-heading text-text mb-2">Design</h3>
+            <p class="text-sm text-muted">UI, webdesign og visuelle identiteter.</p>
+          </div>
+
+          <div class="p-5 border border-border rounded-xl bg-surface">
+            <h3 class="font-heading text-text mb-2">Journalistik</h3>
+            <p class="text-sm text-muted">Interview, research og formidling.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CV PLACEHOLDER -->
+    <section class="py-16 md:py-20 border-t border-border">
+
+      <div class="max-w-3xl mx-auto text-center">
+
+        <Heading
+          htmlheading="h2"
+          size="medium"
+          font="sans"
+          stylingclasses="text-2xl md:text-3xl text-text"
+        >
+          CV (kommer snart)
+        </Heading>
+
+        <Text stylingclasses="mt-4 text-muted text-sm md:text-base">
+          Her kommer en samlet oversigt over min erfaring, uddannelse og projekter.
+          Lige nu er siden under opbygning — men den er på vej.
+        </Text>
+
+        <!-- VISUAL PLACEHOLDER BOX -->
+        <div class="mt-8 border border-dashed border-border rounded-xl py-14 bg-surface">
+          <p class="text-muted text-sm tracking-wide uppercase">
+            CV sektion reserveret
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+</MainLayout>
