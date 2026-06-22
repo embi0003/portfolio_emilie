@@ -1,0 +1,166 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Kontakt from "../components/Kontakt.astro";
+import Deler from "../components/Deler.astro";
+import CvTimelineNew from "../components/CvTimelineNew.astro";
+---
+
+<MainLayout title="Om mig">
+
+  <main class="container mx-auto px-4">
+
+    <!-- HERO -->
+    <section class="py-16 md:py-28">
+      <div class="max-w-6xl mx-auto px-4">
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+
+          <!-- TEXT -->
+          <div class="md:col-span-7">
+
+            <Heading
+              htmlheading="h1"
+              size="large"
+              font="sans"
+              stylingclasses="uppercase tracking-[0.2em]"
+            >
+             Halløjsa!
+            </Heading>
+
+            <Text stylingclasses="mt-6">
+              Mit navn er Emilie, jeg er 27 år, og så brænder jeg for at være kreativ. Om det er i arbejdet med historier, kommunikation eller digitalt design, så elsker jeg at være med til at gøre idéer til noget, der faktisk kan bruges.
+            </Text>
+
+            <Text stylingclasses="mt-4">
+              Jeg trives bedst, når jeg kan være med hele vejen fra idé til færdigt resultat og se, at det faktisk virker i virkeligheden 
+            </Text>
+
+          </div>
+
+          <!-- IMAGE -->
+          <div class="md:col-span-4 flex justify-center md:justify-end">
+
+            <img
+              src="/img/Emilie.webp"
+              alt="Portræt af Emilie"
+              class="w-56 md:w-72 lg:w-80 object-cover"
+            />
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+     <Deler ws="sm" />
+
+
+<section class="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+
+  <div class="max-w-6xl mx-auto px-4 md:py-10">
+
+    <!-- HEADING -->
+    <Heading
+      htmlheading="h2"
+      size="medium"
+      font="sans"
+      stylingclasses="uppercase tracking-[0.3em] mb-10"
+    >
+      KOMPETENCER
+    </Heading>
+
+    <!-- OPTISK GRID (MATCHER HERO STRUCTUR) -->
+    <div class="grid grid-cols-12 gap-10 md:gap-14">
+
+      <!-- 1: LEFT (aligner med heading start) -->
+      <div class="col-span-12 md:col-span-4">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.25em] text-accent"
+        >
+          JOURNALISTIK
+        </Heading>
+
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4">
+          <li>Interviews</li>
+          <li>Research</li>
+          <li>Portrætter</li>
+          <li>Podcast</li>
+          <li>Hindenburg</li>
+          <li>Adobe Premier Pro</li>
+          <li>Speak og værtskab</li>
+        </ul>
+      </div>
+
+      <!-- 2: CENTER (perfekt visuelt center i container) -->
+      <div class="col-span-12 md:col-span-4 md:col-start-5">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.25em] text-accent"
+        >
+          KOMMUNIKATION
+        </Heading>
+
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4">
+          <li>Storytelling</li>
+          <li>Kampagnearbejde</li>
+          <li>Skabe content til sociale medier</li>
+          <li>Community management</li>
+          <li>Udarbejdelse af pressemeddeleser</li>
+          <li>Ghostwriting</li>
+          <li>Strategisk kommunikation</li>
+        </ul>
+      </div>
+
+      <!-- 3: RIGHT (aligner med hero image kant) -->
+      <div class="col-span-12 md:col-span-4 md:col-start-9">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.25em] text-accent"
+        >
+          DIGITALT DESIGN
+        </Heading>
+
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4">
+          <li>UX/UI</li>
+          <li>Figma og Canva</li>
+          <li>(I moderat grad) HTML, CSS, Javascript og Tailwind</li>
+          <li>Webdesign</li>
+          <li>VS Code</li>
+          <li>Brugertests</li>
+          <li>Adobe-pakken</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+     <Deler ws="m" />
+
+    <CvTimelineNew />
+
+    <!-- CONTACT -->
+    <Deler ws="m" />
+
+    <Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>
+
+  </main>
+
+</MainLayout>
