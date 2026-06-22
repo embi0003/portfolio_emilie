@@ -12,48 +12,50 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
   <main class="container mx-auto px-4">
 
     <!-- HERO -->
-    <section class="py-16 md:py-28">
-      <div class="max-w-6xl mx-auto px-4">
+  <section class="py-16 md:py-28">
+  <div class="max-w-6xl mx-auto px-4">
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
 
-          <!-- TEXT -->
-          <div class="md:col-span-7">
+      <!-- TEXT -->
+      <div class="md:col-span-7">
 
-            <Heading
-              htmlheading="h1"
-              size="large"
-              font="sans"
-              stylingclasses="uppercase tracking-[0.2em]"
-            >
-             Halløjsa!
-            </Heading>
+        <Heading
+          htmlheading="h1"
+          size="large"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.2em] intersect:animate-fade-right animate-once animate-duration-[1500ms]"
+        >
+          Halløjsa!
+        </Heading>
 
-            <Text stylingclasses="mt-6">
-              Mit navn er Emilie, jeg er 27 år, og så brænder jeg for at være kreativ. Om det er i arbejdet med historier, kommunikation eller digitalt design, så elsker jeg at være med til at gøre idéer til noget, der faktisk kan bruges.
-            </Text>
+        <Text stylingclasses="mt-6 intersect:animate-fade-right animate-once animate-duration-[1500ms]">
+          Mit navn er Emilie, jeg er 27 år, og så brænder jeg for at være kreativ.
+          Om det er i arbejdet med journalistiske historier, kommunikation eller
+          digitalt design, så elsker jeg at være med til at gøre idéer til noget,
+          der faktisk kan bruges.
+        </Text>
 
-            <Text stylingclasses="mt-4">
-              Jeg trives bedst, når jeg kan være med hele vejen fra idé til færdigt resultat og se, at det faktisk virker i virkeligheden 
-            </Text>
-
-          </div>
-
-          <!-- IMAGE -->
-          <div class="md:col-span-4 flex justify-center md:justify-end">
-
-            <img
-              src="/img/Emilie.webp"
-              alt="Portræt af Emilie"
-              class="w-56 md:w-72 lg:w-80 object-cover"
-            />
-
-          </div>
-
-        </div>
+        <Text stylingclasses="mt-4 intersect:animate-fade-right animate-once animate-duration-[1500ms]">
+          Jeg trives bedst, når jeg kan være med hele vejen fra idé til færdigt
+          resultat og se, at det faktisk virker i virkeligheden.
+        </Text>
 
       </div>
-    </section>
+
+      <!-- IMAGE -->
+      <div class="md:col-span-5 flex justify-center md:justify-end intersect:animate-fade-left animate-once animate-duration-[1500ms]">
+        <img
+          src="/img/emilie1.webp"
+          alt="Portræt af Emilie"
+          class="w-full max-w-lg object-cover"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
      <Deler ws="sm" />
 
@@ -67,7 +69,7 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
       htmlheading="h2"
       size="medium"
       font="sans"
-      stylingclasses="uppercase tracking-[0.3em] mb-10"
+      stylingclasses="uppercase tracking-[0.3em] mb-10 intersect:animate-fade-right animate-once animate-duration-[1500ms]"
     >
       KOMPETENCER
     </Heading>
@@ -81,12 +83,12 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
           htmlheading="h3"
           size="small"
           font="sans"
-          stylingclasses="uppercase tracking-[0.25em] text-accent"
+          stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]"
         >
           JOURNALISTIK
         </Heading>
 
-        <ul class="mt-4 space-y-2 text-sm list-disc pl-4">
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
           <li>Interviews</li>
           <li>Research</li>
           <li>Portrætter</li>
@@ -103,12 +105,12 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
           htmlheading="h3"
           size="small"
           font="sans"
-          stylingclasses="uppercase tracking-[0.25em] text-accent"
+          stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]"
         >
           KOMMUNIKATION
         </Heading>
 
-        <ul class="mt-4 space-y-2 text-sm list-disc pl-4">
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
           <li>Storytelling</li>
           <li>Kampagnearbejde</li>
           <li>Skabe content til sociale medier</li>
@@ -125,12 +127,11 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
           htmlheading="h3"
           size="small"
           font="sans"
-          stylingclasses="uppercase tracking-[0.25em] text-accent"
-        >
+          stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]">
           DIGITALT DESIGN
         </Heading>
-
-        <ul class="mt-4 space-y-2 text-sm list-disc pl-4">
+ 
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
           <li>UX/UI</li>
           <li>Figma og Canva</li>
           <li>(I moderat grad) HTML, CSS, Javascript og Tailwind</li>
@@ -148,7 +149,10 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
 
      <Deler ws="m" />
 
+<section class="intersect:animate-fade-right animate-once animate-duration-[1500ms]">
     <CvTimelineNew />
+
+    </section>
 
     <!-- CONTACT -->
     <Deler ws="m" />
