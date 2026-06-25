@@ -1,0 +1,123 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Kontakt from "../components/Kontakt.astro";
+import Deler from "../components/Deler.astro";
+---
+
+<MainLayout title="Think PR - podcastvært">
+
+<main class="container mx-auto px-4">
+
+ 
+ <!-- 1. HERO -->
+<section class="py-14 md:py-12 mt-10">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent">
+      Podcastvært· Journalistik
+    </p>
+
+    <Heading
+      htmlheading="h1"
+      size="large"
+      font="sans"
+      stylingclasses="mt-4"
+    > Podcastvært på Think About IT
+    </Heading>
+
+    <Text stylingclasses="mt-5 leading-8 text-text max-w-4xl">
+     Som en del af min ansættelse på PR-bureauet Think PR fik jeg muligheden for at starte en podcast op. Det blev til kommunikationspodcasten Think About It, som er en podcast om branchen til branchen (og andre interesserede). Hvert afsnit har besøg af en ny relevant gæst. Jeg stod for research, tilrettelæggelse, interview og klipning.
+    </Text>
+
+  </div>
+</section>
+
+<!-- 2. CONTEXT STRIP (tight version) -->
+<section class="border-t border-b border-border py-5 md:py-6">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-text/80">
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Rolle</span>
+        <span class="ml-2">Journalist</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Medie</span>
+        <span class="ml-2">Think PR</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">År</span>
+        <span class="ml-2">2023-2024</span>
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- 3. FEATURE STORY -->
+ <!-- 3. FEATURE STORY -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent mb-6">
+      Tre udvalgte afsnit
+    </p>
+
+    <div class="max-w-4xl space-y-10">
+
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/episode/2pi5BPX9kRuqZ6hui2ZIep?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/episode/04E3zyRJGWfStjfmXwADCC?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/episode/38hXYqX1CdYCFcae9edEC0?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+
+    </div>
+
+  </div>
+</section>
+
+
+   <Deler ws="m" />
+
+  <!-- KONTAKT -->
+   <Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>
+
+</main>
+
+</MainLayout>
