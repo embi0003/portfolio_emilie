@@ -1,0 +1,180 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Kontakt from "../components/Kontakt.astro";
+import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+---
+
+<MainLayout title="Digitaliseringsstyrelsen - SoMe-kampagne">
+
+<main class="container mx-auto px-4">
+
+ 
+ <!-- 1. HERO -->
+<section class="py-14 md:py-12 mt-10">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent">
+      Minikampagne · SoMe
+    </p>
+
+    <Heading
+      htmlheading="h1"
+      size="large"
+      font="sans"
+      stylingclasses="mt-4"
+    > Følg os - Digitaliseringsstyrelsen
+    </Heading>
+
+    <Text stylingclasses="mt-5 leading-8 text-text max-w-4xl">
+Som en del af min multimediedesigneruddannelse skulle jeg i et 10 uger langt praktikforløb. Praktikken tog jeg på mit studiejob i Digitaliseringsstyrelsen, og her lavede jeg et bud på en minikampagne, der har til formål at tiltrække flere følgere til især den nyopstartede Instagram-profil. Mit fokus var på at skabe større kendskab til Digitaliseringsstyrelsens løsninger, men på en let, sjov og overskuelig måde. Den er netop ved at gå i luften på deres kanaler. </Text>
+
+  </div>
+</section>
+
+<!-- 2. CONTEXT STRIP (tight version) -->
+<section class="border-t border-b border-border py-5 md:py-6">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-text/80">
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Rolle</span>
+        <span class="ml-2">Studentermedhjælper og praktikant</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Medie</span>
+        <span class="ml-2">Digitaliseringsstyrelsen</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">År</span>
+        <span class="ml-2">2026</span>
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 3. KAMPAGNEMATERIALE -->
+<!-- 3. KAMPAGNEMATERIALE -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent mb-6">
+      Kampagnemateriale
+    </p>
+
+    <div class="max-w-5xl space-y-12">
+
+      <!-- INTRO -->
+      <Text stylingclasses="leading-8 text-text">
+        Her ses kampagnens visuelle materiale, bestående af tre koncepter: Kender du typen, POV og Du har ikke spurgt, men... Kender du typen præsenterer styrelsens løsninger som stereotyper og er i et genkendeligt format. Point of view (POV) er skabt som et humoristisk indslag, der samtidig skal linke til de forskellige guides til forskellige livssituationer, der ligger på borger.dk. Og Du har ikke spurgt, men... skal give konkrete tal og fakta om styrelsen, men uden at være for påtrængende.
+      </Text>
+
+      <!-- FEATURE BLOCK (VIDEO + 1 BILLEDE) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+
+        <!-- VIDEO -->
+        <div>
+          <blockquote
+            class="instagram-media"
+            data-instgrm-captioned
+            data-instgrm-permalink="https://www.instagram.com/reel/DZ47JQfj5dQ/"
+            data-instgrm-version="14"
+            style="width:100%;"
+          ></blockquote>
+        </div>
+
+
+      </div>
+
+      <!-- SCRIPT (kun én gang) -->
+      <script is:inline src="https://www.instagram.com/embed.js"></script>
+
+      <script is:inline>
+        window.addEventListener("load", () => {
+          if (window.instgrm) {
+            window.instgrm.Embeds.process();
+          }
+        });
+      </script>
+
+      <!-- GALLERY SECTION -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <img src="/img/opslag1.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/opslag2.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/opslag3.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/opslag4.webp" class="w-full object-cover" loading="lazy" />
+
+       <img src="/img/opslag5.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/opslag6.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/opslag7.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/opslag8.webp" class="w-full object-cover" loading="lazy" />
+
+          <img src="/img/opslag9.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/opslag10.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/opslag11.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/opslag12.webp" class="w-full object-cover" loading="lazy" />
+
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+        <img src="/img/pov1.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/pov2.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/pov3.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/pov4.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/pov5.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/pov6.webp" class="w-full object-cover" loading="lazy" />
+       
+      </div>
+
+ <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <img src="/img/1.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/2.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/3.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/4.webp" class="w-full object-cover" loading="lazy" />
+
+       <img src="/img/5.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/6.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/7.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/8.webp" class="w-full object-cover" loading="lazy" />
+
+        <img src="/img/9.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/10.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/11.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/12.webp" class="w-full object-cover" loading="lazy" />
+
+         <img src="/img/13.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/14.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/15.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/16.webp" class="w-full object-cover" loading="lazy" />
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   <ProjectNav prevHref="/projekt1" nextHref="/projekt3" />
+
+   <Deler ws="m" />
+
+  <!-- KONTAKT -->
+   <Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>
+
+</main>
+
+</MainLayout>

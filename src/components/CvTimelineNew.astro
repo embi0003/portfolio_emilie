@@ -20,7 +20,7 @@ const defaultItems: CvTimelineItem[] = [
     company: "Digitaliseringsstyrelsen",
     role: "Studentermedhjælper",
     description:
-      "I web- og kommunikationsteamet arbejdede jeg med sociale medier, brugertests, intern kommunikation og video."
+      "I web- og kommunikationsteamet arbejdede jeg med sociale medier, brugertests, hjemmesidedesign, intern kommunikation og video."
   },
   {
     date: "2023-2024",
@@ -68,8 +68,8 @@ const loopItems = [...items, ...items, ...items];
 const sectionText = props.sectionText ?? "";
 ---
 
-<section class="py-12 md:py-18 bg-bg intersect:animate-fade-right animate-once animate-duration-[1500ms]">
-  <div class="container mx-auto px-4 max-w-7xl">
+<section class="py-12 md:py-18 bg-bg max-w-6xl mx-auto px-4</div>">
+  <div>
 
     <!-- HEADER -->
     <div class="mb-8 text-left">
@@ -206,7 +206,7 @@ const sectionText = props.sectionText ?? "";
 
     <!-- CTA -->
     <div class="mt-4 md:mt-10 flex justify-center">
-      <Link href="#" variant="primary" size="small">
+      <Link href="/cv.pdf" target="_blank" download variant="primary" size="small">
         Se og download mit CV
       </Link>
     </div>

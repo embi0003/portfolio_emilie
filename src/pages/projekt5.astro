@@ -1,0 +1,178 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Kontakt from "../components/Kontakt.astro";
+import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+---
+
+<MainLayout title="Femina - portræt">
+
+<main class="container mx-auto px-4">
+
+ 
+ <!-- 1. HERO -->
+<section class="py-14 md:py-12 mt-10">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent">
+      Portræt · Journalistik
+    </p>
+
+    <Heading
+      htmlheading="h1"
+      size="large"
+      font="sans"
+      stylingclasses="mt-4"
+    > Julies mand døde af Alzheimers 
+    <br>
+    kort før jul 
+    </Heading>
+
+    <Text stylingclasses="mt-5 leading-8 text-text max-w-4xl">
+      Et portræt af Julie Rubow, der mistede sin mand til Alzheimers kort før jul. Artiklen fortæller om Julies oplevelser og tanker i forbindelse med tabet og hendes kamp for at bevare minderne om sin mand. Artiklen er en del af en serie om "Den første jul efter...". Lavet som en del af mit journalistiske praktikforløb på Femina.
+    </Text>
+
+  </div>
+</section>
+
+<!-- 2. CONTEXT STRIP (tight version) -->
+<section class="border-t border-b border-border py-5 md:py-6">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-text/80">
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Rolle</span>
+        <span class="ml-2">Journalist</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Medie</span>
+        <span class="ml-2">Femina</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">År</span>
+        <span class="ml-2">2021</span>
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- 3. FEATURE STORY -->
+ <section class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4">
+      Uddrag
+    </p>
+
+    <div class="max-w-4xl space-y-10">
+
+      <!-- CITAT / UDDRAG -->
+      <div class="space-y-6">
+  <Text stylingclasses="text-xl leading-9 italic text-text">
+    "Midt i stuen står det pyntede juletræ. Rødgran, ligesom det plejer at være. På træet blafrer flammerne fra de levende lys og stråler om kap med de efterhånden mange julekugler og glimtende pynt, der med årene er blevet tilføjet træet.
+  </Text>
+
+  <Text stylingclasses="text-xl leading-9 italic text-text">
+    For få øjeblikke siden løb 53-årige Julie Rubow sammen med sin familie rundt i huset til tonerne af ”Nu’ det jul igen”. Nu sidder de, ligesom de plejer, og kigger på hinanden åbne gaver.
+  </Text>
+
+<Text stylingclasses="text-xl leading-9 italic text-text">
+    Én efter én. Det kører efter en fast skabelon hvert år, for som Julie Rubow selv siger, skal julen helst altid være på den samme måde.
+  </Text>
+
+  <Text stylingclasses="text-xl leading-9 italic text-text">
+  Det er 24. december 2019, og selv om traditionerne med gaveuddeling og rødgran er de samme, er denne juleaften ikke, som den plejer at være.
+  </Text>
+
+  <Text stylingclasses="text-xl leading-9 italic text-text">
+  I år er det ikke Julies mand, Bjørn, der har sat juletræet i juletræsfoden. Det er ikke Bjørn, der har tændt de levende lys på træet sammen med Julie. Og Bjørn har ikke forpustet været med til at løbe rundt i huset og synge ”Nu’ det jul igen”.
+  </Text>
+
+  <Text stylingclasses="text-xl leading-9 italic text-text">
+  For Bjørn er der ikke.
+
+    Det har han ikke været i tre måneder og 24 dage.
+
+1. september 2019 døde Bjørn som blot 53-årig af demenssygdommen Alzheimers."
+  </Text>
+
+</div>
+
+      <!-- FORKLARENDE TEKST -->
+      <div class="max-w-4xl space-y-6 mt-18">
+        <Text stylingclasses="leading-8 text-text">
+          Med denne artikelserie om "Den første jul, hvor ..." ønskede vi at belyse, hvordan julen kan være en svær tid for mange på den ene eller anden måde. Udover artiklen om Julie Rubow blev der også skrevet artikler om skilsmisse og sygdom.
+        </Text>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- 4. ARTIKLER I SERIEN -->
+  <section class="pb-24">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <Heading
+        htmlheading="h2"
+        size="medium"
+        font="sans"
+        stylingclasses="mb-10"
+      >
+        Læs hele artiklen her
+      </Heading>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- CARD 1 -->
+        <a
+          href="https://www.femina.dk/liv/julies-mand-doede-af-alzheimers-kort-foer-jul-jeg-var-mentalt-udmattet-det-var-et-vaemmeligt"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block transition-all duration-300 hover:-translate-y-1"
+        >
+          <div class="overflow-hidden rounded-xl">
+            <img
+              src="/img/julie.webp"
+              class="w-full aspect-[4/3] object-cover transition duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          <h3 class="mt-5 font-heading text-xl group-hover:text-accent transition-colors duration-300">
+            Julies mand døde af Alzheimers kort før jul: "Jeg var mentalt udmattet. Det var et væmmeligt sted at være"
+          </h3>
+
+          <p class="mt-4 text-sm uppercase tracking-[0.15em] text-accent">
+            Læs artiklen →
+          </p>
+        </a>
+        
+      </div>
+
+    </div>
+  </section>
+
+   <ProjectNav prevHref="/projekt4" nextHref="/projekt6" />
+
+   <Deler ws="m" />
+
+  <!-- KONTAKT -->
+   <Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>
+
+</main>
+
+</MainLayout>

@@ -1,0 +1,155 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Kontakt from "../components/Kontakt.astro";
+import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+---
+
+<MainLayout title="KNR - radiovært">
+
+<main class="container mx-auto px-4">
+
+ 
+ <!-- 1. HERO -->
+<section class="py-14 md:py-12 mt-10">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent">
+      Radiovært· Journalistik
+    </p>
+
+    <Heading
+      htmlheading="h1"
+      size="large"
+      font="sans"
+      stylingclasses="mt-4"
+    > Radiovært og journalist for KNR
+    </Heading>
+
+    <Text stylingclasses="mt-5 leading-8 text-text max-w-4xl">
+     I 2022 fik jeg muligheden for at tage et vikariat på KNR i Nuuk i Grønland. Her lavede jeg forskellige nyhedshistorier til radio og web, ligesom jeg også var vært på radioavisen morgen, middag og aften. Alt sammen på dansk, men jeg fik også læring om grønlandsk udtale.
+    </Text>
+
+  </div>
+</section>
+
+<!-- 2. CONTEXT STRIP (tight version) -->
+<section class="border-t border-b border-border py-5 md:py-6">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-text/80">
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Rolle</span>
+        <span class="ml-2">Journalist</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Medie</span>
+        <span class="ml-2">KNR</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">År</span>
+        <span class="ml-2">2022</span>
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- 3. FEATURE STORY -->
+ <section class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4">
+      Eksempler på to indslag
+    </p>
+
+    <div class="max-w-4xl space-y-10">
+
+      <!-- CITAT / UDDRAG -->
+      <div class="space-y-6">
+  <Text stylingclasses="text-xl leading-9 italic text-text">
+    I dette eksempel står jeg bag første indslag i udsendelsen, der kan høres fra minut 00:59 til 02:44. Indslaget belyser et problem om manglende personale på Ivaaraq, som er et døgntilbud for personer med handicap.
+  </Text>
+
+<a
+  href="https://www.kb.dk/find-materiale/dr-arkivet/post/ds.radio:oai:io:d77c9242-cee2-44a4-a29a-e2c24b89f0ab"
+  target="_blank"
+  class="block p-6 border border-border rounded-xl bg-surface hover:border-accent transition"
+>
+  <Text class="text-xs uppercase tracking-[0.2em] text-accent mb-2">
+    Nyhedsindslag
+  </Text>
+
+  <p class="text-text">
+    Hør radioindslaget hos Det Kgl. Bibliotek
+  </p>
+
+  <p class="text-sm text-muted mt-2">
+    Åbner i DR-arkivet →
+  </p>
+</a>
+
+</div>
+
+
+
+      <!-- CITAT / UDDRAG -->
+      <div class="space-y-6">
+  <Text stylingclasses="text-xl leading-9 italic text-text">
+    I dette eksempel er jeg vært på udsendelsen, der starter ved minut 00:15.
+  </Text>
+
+<a
+  href="https://www.kb.dk/find-materiale/dr-arkivet/post/ds.radio:oai:io:467db94a-b432-49b6-a86a-ce38983c15a1"
+  target="_blank"
+  class="block p-6 border border-border rounded-xl bg-surface hover:border-accent transition"
+>
+  <Text class="text-xs uppercase tracking-[0.2em] text-accent mb-2">
+    Radioindslag
+  </Text>
+
+  <p class="text-text">
+    Hør radioindslaget hos Det Kgl. Bibliotek
+  </p>
+
+  <p class="text-sm text-muted mt-2">
+    Åbner i DR-arkivet →
+  </p>
+</a>
+
+
+      <!-- FORKLARENDE TEKST -->
+      <div class="max-w-4xl space-y-6 mt-18">
+        <Text stylingclasses="leading-8 text-text">
+          Ovenstående er to eksempler fra min tid som journalist på KNR. Desværre rækker deres egne arkiver ikke tilbage til dengang, og derfor er eksemplerne fra de nyheder, vi hver dag sendte til Danmark til P1. 
+        </Text>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+   <ProjectNav prevHref="/projekt2" nextHref="/projekt4" />
+
+  <Deler ws="m" />
+
+  <!-- KONTAKT -->
+   <Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>
+
+</main>
+
+</MainLayout>

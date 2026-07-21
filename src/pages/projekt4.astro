@@ -1,0 +1,121 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Kontakt from "../components/Kontakt.astro";
+import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+---
+
+<MainLayout title="Fodtennis Danmark - SoMe-opslag">
+
+<main class="container mx-auto px-4">
+
+ 
+ <!-- 1. HERO -->
+<section class="py-14 md:py-12 mt-10">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent">
+      SoMe-opslag · Instagram
+    </p>
+
+    <Heading
+      htmlheading="h1"
+      size="large"
+      font="sans"
+      stylingclasses="mt-4"
+    > Fodtennis Danmarks 10 bud
+    </Heading>
+
+    <Text stylingclasses="mt-5 leading-8 text-text max-w-4xl">
+Fodtennis Danmark havde et ønske om, at deres 10 bud blev mere synlige på deres Instagram-profil, og derfor gav jeg mit bud på, hvordan det kunne se ud. De valgte at bruge opslagene, hvor jeg havde fokus på at skabe et simpelt og let genkendeligt design inden for deres visuelle identitet. </Text>
+
+  </div>
+</section>
+
+<!-- 2. CONTEXT STRIP (tight version) -->
+<section class="border-t border-b border-border py-5 md:py-6">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-text/80">
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Rolle</span>
+        <span class="ml-2">Freelance</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">Medie</span>
+        <span class="ml-2">Fodtennis Danmark</span>
+      </p>
+
+      <p class="leading-none">
+        <span class="text-accent uppercase tracking-[0.2em] text-xs">År</span>
+        <span class="ml-2">2026</span>
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 3. SoMe-MATERIALE -->
+
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <p class="text-xs uppercase tracking-[0.3em] text-accent mb-6">
+      SoMe-materiale
+    </p>
+
+    <div class="max-w-5xl space-y-12">
+
+      <!-- INTRO -->
+      <Text stylingclasses="leading-8 text-text">
+       Her ses opslagene for Fodtennis Danmarks 10 bud samt en samlet plakat, der kan bruges i forskellige sammenhænge.
+      </Text>
+      </div>
+
+   
+
+      <!-- GALLERY SECTION -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <img src="/img/fodtennisbud.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/fodtennis1.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/fodtennis2.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/fodtennis3.webp" class="w-full object-cover" loading="lazy" />
+
+       <img src="/img/fodtennis4.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/fodtennis5.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/fodtennis6.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/fodtennis7.webp" class="w-full object-cover" loading="lazy" />
+
+          <img src="/img/fodtennis8.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/fodtennis9.webp" class="w-full object-cover" loading="lazy" />
+        <img src="/img/fodtennis10.webp" class="w-full object-cover" loading="lazy" />
+         <img src="/img/fodtennisplakat.webp" class="w-full object-cover" loading="lazy" />
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   <ProjectNav prevHref="/projekt3" nextHref="/projekt5" />
+
+  <Deler ws="m" />
+
+  <!-- KONTAKT -->
+   <Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>
+
+</main>
+
+</MainLayout>

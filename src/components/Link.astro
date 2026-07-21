@@ -2,12 +2,13 @@
 interface Props {
   href?: string;
   target?: string;
+  download?: boolean | string;
   variant?: "textlink" | "primary" | "secondary";
   size?: "default" | "large" | "medium" | "small";
 }
 
 // Henter parametrene fra Astro.props
-const { href="#", target="_self", variant= "textlink", size = "default" } = Astro.props as Props; 
+const { href="#", target="_self", download = false, variant= "textlink", size = "default" } = Astro.props as Props; 
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
 const linkStyling = "rounded-lg transition-all duration-300 font-semibold uppercase transform hover:scale-102"; 
@@ -27,4 +28,4 @@ const sizeClasses = {
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></a>
+<a href={href} target={target} download={download ? "" : undefined} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></a>
