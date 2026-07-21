@@ -5,6 +5,7 @@ import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Kontakt from "../components/Kontakt.astro";
 import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
 ---
 
 <MainLayout title="Redesign af Bakkefest - UX/UI">
@@ -148,7 +149,9 @@ import Deler from "../components/Deler.astro";
   </div>
 </section>
 
-   <Deler ws="m" />
+   <ProjectNav prevHref="/projekt7" nextHref="/projekt9" />
+
+  <Deler ws="m" />
 
   <!-- KONTAKT -->
    <Kontakt 

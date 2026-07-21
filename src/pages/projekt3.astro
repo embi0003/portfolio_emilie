@@ -4,6 +4,7 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Kontakt from "../components/Kontakt.astro";
 import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
 ---
 
 <MainLayout title="KNR - radiovært">
@@ -136,7 +137,9 @@ import Deler from "../components/Deler.astro";
 </section>
 
 
-   <Deler ws="m" />
+   <ProjectNav prevHref="/projekt2" nextHref="/projekt4" />
+
+  <Deler ws="m" />
 
   <!-- KONTAKT -->
    <Kontakt 

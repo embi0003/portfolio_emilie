@@ -4,6 +4,7 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Kontakt from "../components/Kontakt.astro";
 import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
 ---
 
 <MainLayout title="Fodtennis Danmark - SoMe-opslag">
@@ -102,7 +103,9 @@ Fodtennis Danmark havde et ønske om, at deres 10 bud blev mere synlige på dere
   </div>
 </section>
 
-   <Deler ws="m" />
+   <ProjectNav prevHref="/projekt3" nextHref="/projekt5" />
+
+  <Deler ws="m" />
 
   <!-- KONTAKT -->
    <Kontakt 

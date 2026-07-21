@@ -1,0 +1,133 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Kontakt from "../components/Kontakt.astro";
+import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+---
+
+<MainLayout title="AltID-kampagne for Digitaliseringsstyrelsen - Kampagne">
+
+<main class="container mx-auto px-4">
+
+  <!-- 1. HERO -->
+  <section class="py-8 sm:py-10 md:py-12 mt-6 sm:mt-8 md:mt-10">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <p class="text-xs uppercase tracking-[0.3em] text-accent">
+        Kampagne · Kommunikation
+      </p>
+
+      <Heading
+        htmlheading="h1"
+        size="large"
+        font="sans"
+        stylingclasses="mt-4"
+      >
+        AltID-kampagne for Digitaliseringsstyrelsen
+      </Heading>
+
+      <Text stylingclasses="mt-5 leading-8 text-text max-w-4xl">
+        I min tid i Digitaliseringsstyrelsen arbejdede jeg sammen med flere kollegaer på en kampagne for den nye app AltID. Her var jeg primært med til idéudvikling, brugertests og til at udforme følgetekster til kampagnens indhold. Kampagnen udkommer stadig løbende på SoMe og andre kanaler, og derfor kan det fulde materiale ikke vises.
+      </Text>
+
+    </div>
+  </section>
+
+  <!-- 2. CONTEXT STRIP -->
+  <section class="border-t border-b border-border py-4 sm:py-5 md:py-6">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-text/80">
+
+        <p class="leading-none">
+          <span class="text-accent uppercase tracking-[0.2em] text-xs">Rolle</span>
+          <span class="ml-2">Kampagne- og kommunikationsmedarbejder</span>
+        </p>
+
+        <p class="leading-none">
+          <span class="text-accent uppercase tracking-[0.2em] text-xs">Medie</span>
+          <span class="ml-2">Digitaliseringsstyrelsen</span>
+        </p>
+
+        <p class="leading-none">
+          <span class="text-accent uppercase tracking-[0.2em] text-xs">År</span>
+          <span class="ml-2">2026</span>
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. FEATURE STORY -->
+  <section class="py-10 sm:py-14 md:py-16 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <div class="max-w-4xl">
+        <Text stylingclasses="leading-8 text-text">
+          Projektet handlede om at skabe en kampagne, der både var engagerende og tydelig, og som især skulle ramme den yngre målgruppe. Jeg bidrog med idéudvikling, brugertests og udvikling af følgetekster, så indholdet kunne blive mere stærkt og mere målrettet unge mellem 15-25 år.
+        </Text>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. KAMPAGNEBILDER -->
+  <section class="pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <Heading
+        htmlheading="h2"
+        size="medium"
+        font="sans"
+        stylingclasses="mb-6 sm:mb-8 md:mb-10"
+      >
+        Kampagnemateriale
+      </Heading>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div class="overflow-hidden">
+          <img src="/img/kampagne.webp" alt="AltID-kampagne" class="w-full h-auto object-cover" />
+        </div>
+
+        <div class="h-full overflow-hidden">
+          <div class="flex h-full flex-col">
+            <img src="/img/kampagne2.webp" alt="Kampagnevisual" class="w-full h-auto object-cover" />
+            <div class="mt-4 md:mt-auto pt-2 text-sm leading-7 text-text">
+              <p>
+                Her kan du læse mere om appen og se hjemmesidens layout, som jeg også har været med til at udvikle.
+              </p>
+              <a
+                href="https://digst.dk/it-loesninger/altid/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-2 inline-block text-accent uppercase tracking-[0.2em] hover:opacity-70 transition"
+              >
+                Se hjemmesiden →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <ProjectNav prevHref="/projekt10" nextHref="/projekt12" />
+
+  <Deler ws="m" />
+
+  <!-- KONTAKT -->
+  <Kontakt
+    title="Skal vi tage en kop kaffe?"
+    text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+    ctaLabel="Kontakt mig her"
+    ctaHref="/kontakt"
+    imageSrc="/img/telefon.webp"
+  />
+
+</main>
+
+</MainLayout>

@@ -1,0 +1,146 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Kontakt from "../components/Kontakt.astro";
+import Deler from "../components/Deler.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+---
+
+<MainLayout title="Pressemeddelelse for Le Mans og Lego - Kommunikation">
+
+<main class="container mx-auto px-4">
+
+  <!-- 1. HERO -->
+  <section class="py-14 md:py-12 mt-10">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <p class="text-xs uppercase tracking-[0.3em] text-accent">
+        Pressemeddelelse · Kommunikation
+      </p>
+
+      <Heading
+        htmlheading="h1"
+        size="large"
+        font="sans"
+        stylingclasses="mt-4"
+      >
+        Pressemeddelelse for Le Mans og Lego
+      </Heading>
+
+      <Text stylingclasses="mt-5 leading-8 text-text max-w-4xl">
+        I dette projekt skabte jeg en pressemeddelelse til Le Mans og Lego med fokus på tydelig kommunikation, stærk nyhedsvinkel og en professionel tone, der passede til begge brands.
+      </Text>
+
+    </div>
+  </section>
+
+  <!-- 2. CONTEXT STRIP -->
+  <section class="border-t border-b border-border py-5 md:py-6">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-text/80">
+
+        <p class="leading-none">
+          <span class="text-accent uppercase tracking-[0.2em] text-xs">Rolle</span>
+          <span class="ml-2">PR-rådgiver</span>
+        </p>
+
+        <p class="leading-none">
+          <span class="text-accent uppercase tracking-[0.2em] text-xs">Medie</span>
+          <span class="ml-2">Pressemeddelelse</span>
+        </p>
+
+        <p class="leading-none">
+          <span class="text-accent uppercase tracking-[0.2em] text-xs">År</span>
+          <span class="ml-2">2022</span>
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. FEATURE STORY -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4">
+        Uddrag
+      </p>
+
+      <div class="max-w-4xl space-y-10">
+
+        <div>
+          <Text stylingclasses="text-xl leading-9 italic text-text">
+            "Vores to brands er gået sammen om at skabe et produkt, der hylder en ny æra af hybridløb og ingeniørarbejde", siger Kasper René Hansen, der er designer ved LEGO Group.
+          </Text>
+        </div>
+
+        <div class="max-w-4xl space-y-6">
+          <Text stylingclasses="leading-8 text-text">
+            Pressemeddelelsen byggede på et samarbejde mellem de to brands og havde til formål at formidle historien på en klar, professionel og medievenlig måde. Jeg arbejdede med nyhedsværdi, tone og struktur for at sikre, at budskabet kom frem tydeligt og engagerende.
+          </Text>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ARTIKLER I SERIEN -->
+  <section class="pb-24">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <Heading
+        htmlheading="h2"
+        size="medium"
+        font="sans"
+        stylingclasses="mb-10"
+      >
+        Læs pressemeddelelsen her
+      </Heading>
+
+      <div class="max-w-md">
+        <a
+          href="https://www.motorsporten.dk/news.asp?aid=76137&title=Le+Mans+%2D+Nedt+%23230%3Bllingen+er+begyndt%3A+Ny+LEGO+%23174%3B+Technic+%238482%3B+Peugeot+9X8+hylder+den+hybride+hyperbil+forud+for+Le+Mans%2Ddebut"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block transition-all duration-300 hover:-translate-y-1"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="/img/pressemeddelelse.webp"
+              class="w-full aspect-[4/3] object-cover transition duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          <h3 class="mt-5 font-heading text-xl group-hover:text-accent transition-colors duration-300">
+            Læs pressemeddelelsen
+          </h3>
+
+          <p class="mt-4 text-sm uppercase tracking-[0.15em] text-accent">
+            Læs her →
+          </p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <ProjectNav prevHref="/projekt11" nextHref="/projekt1" />
+
+  <Deler ws="m" />
+
+  <!-- KONTAKT -->
+  <Kontakt
+    title="Skal vi tage en kop kaffe?"
+    text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+    ctaLabel="Kontakt mig her"
+    ctaHref="/kontakt"
+    imageSrc="/img/telefon.webp"
+  />
+
+</main>
+
+</MainLayout>
