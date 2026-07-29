@@ -13,7 +13,7 @@ import ProjectNav from "../components/ProjectNav.astro";
 
  
  <!-- 1. HERO -->
-<section class="py-14 md:py-12 mt-10">
+<section class="py-10 md:py-12 mt-6 md:mt-10">
   <div class="max-w-6xl mx-auto px-4">
 
     <p class="text-xs uppercase tracking-[0.3em] text-accent">
@@ -30,7 +30,7 @@ import ProjectNav from "../components/ProjectNav.astro";
     kort før jul 
     </Heading>
 
-    <Text stylingclasses="mt-5 leading-8 text-text max-w-4xl">
+    <Text stylingclasses="mt-4 md:mt-5 leading-7 md:leading-8 text-text max-w-4xl">
       Et portræt af Julie Rubow, der mistede sin mand til Alzheimers kort før jul. Artiklen fortæller om Julies oplevelser og tanker i forbindelse med tabet og hendes kamp for at bevare minderne om sin mand. Artiklen er en del af en serie om "Den første jul efter...". Lavet som en del af mit journalistiske praktikforløb på Femina.
     </Text>
 
@@ -64,38 +64,38 @@ import ProjectNav from "../components/ProjectNav.astro";
 </section>
 
   <!-- 3. FEATURE STORY -->
- <section class="py-20">
+ <section class="py-12 md:py-20">
   <div class="max-w-6xl mx-auto px-4">
 
     <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4">
       Uddrag
     </p>
 
-    <div class="max-w-4xl space-y-10">
+    <div class="max-w-4xl space-y-6 md:space-y-10">
 
       <!-- CITAT / UDDRAG -->
-      <div class="space-y-6">
-  <Text stylingclasses="text-xl leading-9 italic text-text">
+      <div class="space-y-5 md:space-y-6">
+  <Text stylingclasses="text-lg md:text-xl leading-8 md:leading-9 italic text-text">
     "Midt i stuen står det pyntede juletræ. Rødgran, ligesom det plejer at være. På træet blafrer flammerne fra de levende lys og stråler om kap med de efterhånden mange julekugler og glimtende pynt, der med årene er blevet tilføjet træet.
   </Text>
 
-  <Text stylingclasses="text-xl leading-9 italic text-text">
+  <Text stylingclasses="text-lg md:text-xl leading-8 md:leading-9 italic text-text">
     For få øjeblikke siden løb 53-årige Julie Rubow sammen med sin familie rundt i huset til tonerne af ”Nu’ det jul igen”. Nu sidder de, ligesom de plejer, og kigger på hinanden åbne gaver.
   </Text>
 
-<Text stylingclasses="text-xl leading-9 italic text-text">
+<Text stylingclasses="text-lg md:text-xl leading-8 md:leading-9 italic text-text">
     Én efter én. Det kører efter en fast skabelon hvert år, for som Julie Rubow selv siger, skal julen helst altid være på den samme måde.
   </Text>
 
-  <Text stylingclasses="text-xl leading-9 italic text-text">
+  <Text stylingclasses="text-lg md:text-xl leading-8 md:leading-9 italic text-text">
   Det er 24. december 2019, og selv om traditionerne med gaveuddeling og rødgran er de samme, er denne juleaften ikke, som den plejer at være.
   </Text>
 
-  <Text stylingclasses="text-xl leading-9 italic text-text">
+  <Text stylingclasses="text-lg md:text-xl leading-8 md:leading-9 italic text-text">
   I år er det ikke Julies mand, Bjørn, der har sat juletræet i juletræsfoden. Det er ikke Bjørn, der har tændt de levende lys på træet sammen med Julie. Og Bjørn har ikke forpustet været med til at løbe rundt i huset og synge ”Nu’ det jul igen”.
   </Text>
 
-  <Text stylingclasses="text-xl leading-9 italic text-text">
+  <Text stylingclasses="text-lg md:text-xl leading-8 md:leading-9 italic text-text">
   For Bjørn er der ikke.
 
     Det har han ikke været i tre måneder og 24 dage.
@@ -106,8 +106,8 @@ import ProjectNav from "../components/ProjectNav.astro";
 </div>
 
       <!-- FORKLARENDE TEKST -->
-      <div class="max-w-4xl space-y-6 mt-18">
-        <Text stylingclasses="leading-8 text-text">
+      <div class="max-w-4xl space-y-6 mt-8 md:mt-16">
+        <Text stylingclasses="leading-7 md:leading-8 text-text">
           Med denne artikelserie om "Den første jul, hvor ..." ønskede vi at belyse, hvordan julen kan være en svær tid for mange på den ene eller anden måde. Udover artiklen om Julie Rubow blev der også skrevet artikler om skilsmisse og sygdom.
         </Text>
       </div>
@@ -125,7 +125,7 @@ import ProjectNav from "../components/ProjectNav.astro";
         htmlheading="h2"
         size="medium"
         font="sans"
-        stylingclasses="mb-10"
+        stylingclasses="mb-8 md:mb-10"
       >
         Læs hele artiklen her
       </Heading>
@@ -137,9 +137,9 @@ import ProjectNav from "../components/ProjectNav.astro";
           href="https://www.femina.dk/liv/julies-mand-doede-af-alzheimers-kort-foer-jul-jeg-var-mentalt-udmattet-det-var-et-vaemmeligt"
           target="_blank"
           rel="noopener noreferrer"
-          class="group block transition-all duration-300 hover:-translate-y-1"
+          class="group block transition-all duration-300 md:hover:-translate-y-1"
         >
-          <div class="overflow-hidden rounded-xl">
+          <div class="overflow-hidden rounded-xl" aria-hidden="true">
             <img
               src="/img/julie.webp"
               alt="Julie Rubow på Femina-artiklen"
@@ -147,7 +147,8 @@ import ProjectNav from "../components/ProjectNav.astro";
               height="900"
               loading="lazy"
               decoding="async"
-              class="w-full aspect-[4/3] object-cover transition duration-500 group-hover:scale-105"
+              class="w-full aspect-[4/3] object-cover transition duration-500 md:group-hover:scale-105"
+              aria-hidden="true"
             />
           </div>
 
