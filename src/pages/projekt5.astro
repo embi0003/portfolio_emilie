@@ -41,7 +41,7 @@ import ProjectNav from "../components/ProjectNav.astro";
 <section class="border-t border-b border-border py-5 md:py-6">
   <div class="max-w-6xl mx-auto px-4">
 
-    <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-text/80">
+    <div class="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-y-3 sm:gap-x-8 sm:gap-y-2 text-sm text-text/80">
 
       <p class="leading-none">
         <span class="text-accent uppercase tracking-[0.2em] text-xs">Rolle</span>
@@ -118,7 +118,7 @@ import ProjectNav from "../components/ProjectNav.astro";
 </section>
 
   <!-- 4. ARTIKLER I SERIEN -->
-  <section class="pb-24">
+  <section class="pb-16 md:pb-24">
     <div class="max-w-6xl mx-auto px-4">
 
       <Heading
@@ -152,11 +152,11 @@ import ProjectNav from "../components/ProjectNav.astro";
             />
           </div>
 
-          <h3 class="mt-5 font-heading text-xl group-hover:text-accent transition-colors duration-300">
+          <h3 class="mt-4 md:mt-5 font-heading text-lg md:text-xl leading-6 md:leading-7 md:group-hover:text-accent transition-colors duration-300">
             Julies mand døde af Alzheimers kort før jul: "Jeg var mentalt udmattet. Det var et væmmeligt sted at være"
           </h3>
 
-          <p class="mt-4 text-sm uppercase tracking-[0.15em] text-accent">
+          <p class="mt-3 md:mt-4 text-sm uppercase tracking-[0.15em] text-accent">
             Læs artiklen →
           </p>
         </a>
@@ -166,7 +166,7 @@ import ProjectNav from "../components/ProjectNav.astro";
     </div>
   </section>
 
-  <section class="pb-16">
+  <section class="pb-12 md:pb-16">
     <div class="max-w-6xl mx-auto px-4">
       <Heading
         htmlheading="h2"
@@ -179,6 +179,7 @@ import ProjectNav from "../components/ProjectNav.astro";
 
       <div class="max-w-4xl space-y-6">
         <iframe
+          title="Spotify-episode om Julie Rubow"
           style="border-radius:12px"
           src="https://open.spotify.com/embed/episode/2pi5BPX9kRuqZ6hui2ZIep?utm_source=generator"
           width="100%"
@@ -189,6 +190,7 @@ import ProjectNav from "../components/ProjectNav.astro";
         ></iframe>
 
         <iframe
+          title="Spotify-episode om den første jul efter tab"
           style="border-radius:12px"
           src="https://open.spotify.com/embed/episode/04E3zyRJGWfStjfmXwADCC?utm_source=generator"
           width="100%"
@@ -199,6 +201,7 @@ import ProjectNav from "../components/ProjectNav.astro";
         ></iframe>
 
         <iframe
+          title="Spotify-episode om at bearbejde sorg"
           style="border-radius:12px"
           src="https://open.spotify.com/embed/episode/38hXYqX1CdYCFcae9edEC0?utm_source=generator"
           width="100%"
