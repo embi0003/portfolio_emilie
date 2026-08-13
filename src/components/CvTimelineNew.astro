@@ -68,8 +68,8 @@ const loopItems = [...items, ...items, ...items];
 const sectionText = props.sectionText ?? "";
 ---
 
-<section class="py-12 md:py-18 bg-bg max-w-6xl mx-auto px-4</div>">
-  <div>
+<section class="py-12 md:py-18 bg-bg">
+  <div class="max-w-6xl mx-auto px-4">
 
     <!-- HEADER -->
     <div class="mb-8 text-left">
@@ -175,10 +175,20 @@ const sectionText = props.sectionText ?? "";
           requestAnimationFrame(autoScroll);
         }
 
-        autoScroll();
-
+        // Pause/resume on pointer/touch interactions so mobile users can scroll freely
         el.addEventListener("mouseenter", () => (isPaused = true));
         el.addEventListener("mouseleave", () => (isPaused = false));
+        el.addEventListener("pointerdown", () => (isPaused = true));
+        el.addEventListener("pointerup", () => (isPaused = false));
+        el.addEventListener("touchstart", () => (isPaused = true), { passive: true });
+        el.addEventListener("touchend", () => (isPaused = false));
+
+        // Only run the automatic slow scroll on medium+ screens — disable on small devices
+        const supportsAutoScroll = !(window.matchMedia && window.matchMedia("(max-width: 767px)").matches);
+
+        if (supportsAutoScroll) {
+          autoScroll();
+        }
       </script>
 
       <!-- DESKTOP ARROWS (ONLY) -->
@@ -216,7 +226,7 @@ const sectionText = props.sectionText ?? "";
 
 <style>
 .timeline-scroll {
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: none;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
@@ -224,5 +234,11 @@ const sectionText = props.sectionText ?? "";
 
 .timeline-scroll::-webkit-scrollbar {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .timeline-scroll {
+    scroll-snap-type: x mandatory;
+  }
 }
 </style>
