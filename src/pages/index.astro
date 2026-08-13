@@ -8,6 +8,7 @@ import Card from "../components/Card.astro";
 import CvTimelineNew from "../components/CvTimelineNew.astro";
 import Kontakt from "../components/Kontakt.astro";
 import Deler from "../components/Deler.astro";
+
 ---
 <MainLayout title="Forside">
 	<main class="container mx-auto px-4">
@@ -15,17 +16,7 @@ import Deler from "../components/Deler.astro";
 
 		<Deler ws="m" />
 
-		<section class="full-bleed bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
-			<div class="container mx-auto px-4 md:py-10">
-				<div class="max-w-6xl mx-auto">
-					<div class="mb-10 intersect:animate-fade-right animate-once animate-duration-[1500ms]">
-						<Heading htmlheading="h2" size="medium" font="sans" stylingclasses="uppercase tracking-[0.3em] text-2xl md:text-3xl">
-							Udvalgte projekter
-						</Heading>
-						<Text stylingclasses="max-w-5xl text-text leading-7">
-							Her er et udpluk af projekter, der repræsenterer mit arbejde med journalistik og multimediedesign. Se flere projekter og cases på min samlede projektside.
-						</Text>
-					</div>
+		<section class="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
 
 					<div class="grid gap-6 md:grid-cols-3 md:[grid-auto-rows:1fr]">
 						<Card 
@@ -66,28 +57,7 @@ import Deler from "../components/Deler.astro";
 				</div>
 			</div>
 		</section>
-		
-		<!-- <Deler ws="m" />
-
-		<section class="py-12 md:py-16 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
-			<div class="max-w-6xl mx-auto px-4 md:px-0 intersect:animate-fade-right animate-once animate-duration-[1500ms]">
-				<div class="mb-10">
-					<Heading htmlheading="h2" size="medium" font="sans" stylingclasses="uppercase tracking-[0.3em] text-2xl md:text-3xl mb-4">
-						Mød mig her
-					</Heading>
-					<Text stylingclasses="max-w-2xl text-text leading-7">
-						Jeg har lavet en lille video, der skal give et større indblik i, hvem jeg er.
-					</Text>
-				</div>
-
-				<div class="aspect-video bg-surface border border-border rounded-[2rem] overflow-hidden intersect:animate-fade-left animate-once animate-duration-[1500ms]">
-					<!-- Video embed placeholder -->
-					<!-- <div class="w-full h-full flex items-center justify-center text-text">
-						<p class="text-xl">Tilføj dit videoindhold her</p>
-					</div>
-				</div>
-			</div>
-		</section> -->
+	
 
 		<Deler ws="m" />
 

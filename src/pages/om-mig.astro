@@ -8,138 +8,163 @@ import CvTimelineNew from "../components/CvTimelineNew.astro";
 ---
 
 <MainLayout title="Om mig">
-  <main class="overflow-x-hidden">
-    <section class="mx-auto max-w-6xl px-4 py-16 md:py-28">
-      <div class="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16 md:items-start">
-        <div class="md:col-span-7">
-          <Heading
-            htmlheading="h1"
-            size="large"
-            font="sans"
-            stylingclasses="uppercase tracking-[0.2em] intersect:animate-fade-right animate-once animate-duration-[1500ms]"
-          >
-            Halløjsa!
-          </Heading>
 
-          <Text stylingclasses="mt-6 intersect:animate-fade-right animate-once animate-duration-[1500ms]">
-            Mit navn er Emilie, jeg er 27 år, og så brænder jeg for at være kreativ.
-            Om det er i arbejdet med journalistiske historier, kommunikation eller
-            digitalt design, så elsker jeg at være med til at gøre idéer til noget,
-            der faktisk kan bruges.
-          </Text>
+  <main class="container mx-auto px-4">
 
-          <Text stylingclasses="mt-4 intersect:animate-fade-right animate-once animate-duration-[1500ms]">
-            Jeg trives bedst, når jeg kan være med hele vejen fra idé til færdigt
-            resultat og se, at det faktisk virker i virkeligheden.
-          </Text>
-        </div>
+    <!-- HERO -->
+  <section class="py-16 md:py-28">
+  <div class="max-w-6xl mx-auto px-4">
 
-        <div class="md:col-span-5 md:flex md:justify-end intersect:animate-fade-left animate-once animate-duration-[1500ms]">
-          <img
-            src="/img/emilie1.webp"
-            alt="Portræt af Emilie"
-            class="w-full max-w-lg object-cover"
-          />
-        </div>
-      </div>
-    </section>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
 
-    <Deler ws="sm" />
+      <!-- TEXT -->
+      <div class="md:col-span-7">
 
-    <section class="relative left-1/2 -ml-[50vw] w-screen bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
-      <div class="mx-auto max-w-6xl px-4 md:py-10">
         <Heading
-          htmlheading="h2"
-          size="medium"
+          htmlheading="h1"
+          size="large"
           font="sans"
-          stylingclasses="uppercase tracking-[0.3em] mb-10 intersect:animate-fade-right animate-once animate-duration-[1500ms]"
+          stylingclasses="uppercase tracking-[0.2em] intersect:animate-fade-right animate-once animate-duration-[1500ms]"
         >
-          KOMPETENCER
+          Halløjsa!
         </Heading>
 
-        <div class="grid grid-cols-12 gap-10 md:gap-14">
-          <div class="col-span-12 md:col-span-4">
-            <Heading
-              htmlheading="h3"
-              size="small"
-              font="sans"
-              stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]"
-            >
-              JOURNALISTIK
-            </Heading>
+        <Text stylingclasses="mt-6 intersect:animate-fade-right animate-once animate-duration-[1500ms]">
+          Mit navn er Emilie, jeg er 27 år, og så brænder jeg for at være kreativ.
+          Om det er i arbejdet med journalistiske historier, kommunikation eller
+          digitalt design, så elsker jeg at være med til at gøre idéer til noget,
+          der faktisk kan bruges.
+        </Text>
 
-            <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
-              <li>Interviews</li>
-              <li>Research</li>
-              <li>Portrætter</li>
-              <li>Podcast</li>
-              <li>Hindenburg</li>
-              <li>Adobe Premier Pro</li>
-              <li>Speak og værtskab</li>
-            </ul>
-          </div>
+        <Text stylingclasses="mt-4 intersect:animate-fade-right animate-once animate-duration-[1500ms]">
+          Jeg trives bedst, når jeg kan være med hele vejen fra idé til færdigt
+          resultat og se, at det faktisk virker i virkeligheden.
+        </Text>
 
-          <div class="col-span-12 md:col-span-4 md:col-start-5">
-            <Heading
-              htmlheading="h3"
-              size="small"
-              font="sans"
-              stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]"
-            >
-              KOMMUNIKATION
-            </Heading>
-
-            <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
-              <li>Storytelling</li>
-              <li>Kampagnearbejde</li>
-              <li>Skabe content til sociale medier</li>
-              <li>Community management</li>
-              <li>Udarbejdelse af pressemeddeleser</li>
-              <li>Ghostwriting</li>
-              <li>Strategisk kommunikation</li>
-            </ul>
-          </div>
-
-          <div class="col-span-12 md:col-span-4 md:col-start-9">
-            <Heading
-              htmlheading="h3"
-              size="small"
-              font="sans"
-              stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]"
-            >
-              DIGITALT DESIGN
-            </Heading>
-
-            <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
-              <li>UX/UI</li>
-              <li>Figma og Canva</li>
-              <li>(I moderat grad) HTML, CSS, Javascript og Tailwind</li>
-              <li>Webdesign</li>
-              <li>VS Code</li>
-              <li>Brugertests</li>
-              <li>Adobe-pakken</li>
-            </ul>
-          </div>
-        </div>
       </div>
+
+      <!-- IMAGE -->
+      <div class="md:col-span-5 flex justify-center md:justify-end intersect:animate-fade-left animate-once animate-duration-[1500ms]">
+        <img
+          src="/img/emilie1.webp"
+          alt="Portræt af Emilie"
+          class="w-full max-w-lg object-cover"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+     <Deler ws="sm" />
+
+
+<section class="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+
+  <div class="max-w-6xl mx-auto px-4 md:py-10">
+
+    <!-- HEADING -->
+    <Heading
+      htmlheading="h2"
+      size="medium"
+      font="sans"
+      stylingclasses="uppercase tracking-[0.3em] mb-10 intersect:animate-fade-right animate-once animate-duration-[1500ms]"
+    >
+      KOMPETENCER
+    </Heading>
+
+    <!-- OPTISK GRID (MATCHER HERO STRUCTUR) -->
+    <div class="grid grid-cols-12 gap-10 md:gap-14">
+
+      <!-- 1: LEFT (aligner med heading start) -->
+      <div class="col-span-12 md:col-span-4">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]"
+        >
+          JOURNALISTIK
+        </Heading>
+
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+          <li>Interviews</li>
+          <li>Research</li>
+          <li>Portrætter</li>
+          <li>Podcast</li>
+          <li>Hindenburg</li>
+          <li>Adobe Premier Pro</li>
+          <li>Speak og værtskab</li>
+        </ul>
+      </div>
+
+      <!-- 2: CENTER (perfekt visuelt center i container) -->
+      <div class="col-span-12 md:col-span-4 md:col-start-5">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]"
+        >
+          KOMMUNIKATION
+        </Heading>
+
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+          <li>Storytelling</li>
+          <li>Kampagnearbejde</li>
+          <li>Skabe content til sociale medier</li>
+          <li>Community management</li>
+          <li>Udarbejdelse af pressemeddeleser</li>
+          <li>Ghostwriting</li>
+          <li>Strategisk kommunikation</li>
+        </ul>
+      </div>
+
+      <!-- 3: RIGHT (aligner med hero image kant) -->
+      <div class="col-span-12 md:col-span-4 md:col-start-9">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="sans"
+          stylingclasses="uppercase tracking-[0.25em] text-accent intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+          DIGITALT DESIGN
+        </Heading>
+ 
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-4 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+          <li>UX/UI</li>
+          <li>Figma og Canva</li>
+          <li>(I moderat grad) HTML, CSS, Javascript og Tailwind</li>
+          <li>Webdesign</li>
+          <li>VS Code</li>
+          <li>Brugertests</li>
+          <li>Adobe-pakken</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+     <Deler ws="m" />
+
+<section class="intersect:animate-fade-right animate-once animate-duration-[1500ms]">
+    <CvTimelineNew />
+
     </section>
 
-    <div class="mx-auto max-w-6xl px-4">
-      <Deler ws="m" />
+    <!-- CONTACT -->
+    <Deler ws="m" />
 
-      <section class="intersect:animate-fade-right animate-once animate-duration-[1500ms]">
-        <CvTimelineNew />
-      </section>
+    <Kontakt 
+  title="Skal vi tage en kop kaffe?"
+  text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+  ctaLabel="Kontakt mig her"
+  ctaHref="/kontakt"
+  imageSrc="/img/telefon.webp"
+/>
 
-      <Deler ws="m" />
-
-      <Kontakt
-        title="Skal vi tage en kop kaffe?"
-        text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
-        ctaLabel="Kontakt mig her"
-        ctaHref="/kontakt"
-        imageSrc="/img/telefon.webp"
-      />
-    </div>
   </main>
+
 </MainLayout>
