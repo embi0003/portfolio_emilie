@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import Heading from "../components/Heading.astro";
-import Text from "../components/Text.astro";
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
 import CvTimelineNew from "../components/CvTimelineNew.astro";
@@ -16,9 +15,20 @@ import Deler from "../components/Deler.astro";
 
 		<Deler ws="m" />
 
-		<section class="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+		<section class="full-bleed bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
+			<div class="mx-auto max-w-6xl px-4">
+				<div class="mb-8 text-left">
+					<Heading
+						htmlheading="h2"
+						size="medium"
+						font="sans"
+						stylingclasses="uppercase tracking-[0.35em] text-3xl md:text-4xl text-text"
+					>
+						Udvalgte projekter
+					</Heading>
+				</div>
 
-					<div class="grid gap-6 md:grid-cols-3 md:[grid-auto-rows:1fr]">
+				<div class="grid gap-6 md:grid-cols-3 md:[grid-auto-rows:1fr]">
 						<Card 
 							href="/projekter"
 							category="UX/UI" 
@@ -51,14 +61,10 @@ import Deler from "../components/Deler.astro";
 					</div>
 
 					<div class="mt-12 text-center">
-					
-    				<Link href='/projekter' variant='primary' size='small'> Se alle projekter </Link>
-					</div>
+					<Link href='/projekter' variant='primary' size='small'> Se alle projekter </Link>
 				</div>
 			</div>
 		</section>
-	
-
 		<Deler ws="m" />
 
 <CvTimelineNew />
