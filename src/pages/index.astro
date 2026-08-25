@@ -10,23 +10,13 @@ import Deler from "../components/Deler.astro";
 
 ---
 <MainLayout title="Forside">
-
-	<main class="w-full max-w-full overflow-x-hidden">
-
-		<!-- HERO -->
-		<section class="w-full">
-			<Hero />
-		</section>
-
+	<main class="container mx-auto px-4">
+		<Hero/>
 
 		<Deler ws="m" />
 
-
-		<!-- UDVALGTE PROJEKTER -->
-		<section class="w-full bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms]">
-
-			<div class="w-full max-w-6xl mx-auto px-4">
-
+		<section class="full-bleed bg-accent-soft py-12 intersect:animate-fade-up animate-once animate-duration-[1500ms] overflow-x-hidden">
+			<div class="mx-auto max-w-6xl px-4">
 				<div class="mb-8 text-left">
 					<Heading
 						htmlheading="h2"
@@ -38,16 +28,13 @@ import Deler from "../components/Deler.astro";
 					</Heading>
 				</div>
 
-
-				<!-- PROJEKTER -->
-				<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:[grid-auto-rows:1fr]">
-
+				<div class="grid gap-6 md:grid-cols-3 md:[grid-auto-rows:1fr]">
 					<Card 
 						href="/projekter"
 						category="UX/UI" 
 						title="Redesign af NGO'en Hjælp Din Næste"
 						description="Et komplet redesign af Hjælp Din Næstes hjemmeside med fokus på at forbedre den visuelle identitet og navigationen. Afsluttende eksamensprojekt på multimediedesigneruddannelsen."
-						class="w-full intersect:animate-fade-left animate-once animate-duration-[1500ms]"
+						class="intersect:animate-fade-left animate-once animate-duration-[1500ms]"
 						linkText="Læs mere"
 						linkHref="/projekter"
 					/>
@@ -57,7 +44,7 @@ import Deler from "../components/Deler.astro";
 						category="Podcast" 
 						title="Podcast om kommunikation"
 						description="Think About It er en podcast, der går i dybden med områder inden for kommunikation med forskellige gæster fra branchen."
-						class="w-full intersect:animate-fade-left animate-once animate-duration-[1500ms]"
+						class="intersect:animate-fade-left animate-once animate-duration-[1500ms]"
 						linkText="Læs mere"
 						linkHref="/projekter"
 					/>
@@ -67,52 +54,33 @@ import Deler from "../components/Deler.astro";
 						category="SoMe" 
 						title="Minikampagne for Digitaliseringsstyrelsen"
 						description="En minikampagne målrettet Facebook og Instagram med fokus på at øge engagementet på Digitaliseringsstyrelsens kanaler."
-						class="w-full intersect:animate-fade-left animate-once animate-duration-[1500ms]"
+						class="intersect:animate-fade-left animate-once animate-duration-[1500ms]"
 						linkText="Læs mere"
 						linkHref="/projekter"
 					/>
-
 				</div>
 
-
 				<div class="mt-12 text-center">
-					<Link
-						href="/projekter"
-						variant="primary"
-						size="small"
-					>
+					<Link href="/projekter" variant="primary" size="small">
 						Se alle projekter
 					</Link>
 				</div>
-
 			</div>
-
 		</section>
-
 
 		<Deler ws="m" />
 
-
-		<!-- CV -->
-		<section class="w-full max-w-full overflow-hidden">
-			<CvTimelineNew />
-		</section>
-
+		<CvTimelineNew />
 
 		<Deler ws="m" />
 
-
-		<!-- KONTAKT -->
-		<section class="w-full max-w-full">
-			<Kontakt 
-				title="Skal vi tage en kop kaffe?"
-				text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
-				ctaLabel="Kontakt mig her"
-				ctaHref="/kontakt"
-				imageSrc="/img/telefon.webp"
-			/>	
-		</section>
+		<Kontakt 
+			title="Skal vi tage en kop kaffe?"
+			text="Hvis du er nået hertil og tænker 'hmm, Emilie, hun kunne godt være et match', så tøv ikke med at række ud! Jeg er altid klar på at tage en kop kaffe og finde ud af, hvordan vi kan skabe noget fedt sammen."
+			ctaLabel="Kontakt mig her"
+			ctaHref="/kontakt"
+			imageSrc="/img/telefon.webp"
+		/>	
 
 	</main>
-
 </MainLayout>
