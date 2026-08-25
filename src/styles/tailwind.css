@@ -31,6 +31,11 @@
     font-family: var(--font-sans);
     color: var(--color-text);
     background-color: var(--color-bg);
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   a {
@@ -70,9 +75,22 @@
     background-color: var(--color-accent-soft);
   }
 
+  /* Robust full-bleed utility that avoids creating horizontal overflow
+     when used inside a centered container with padding. */
   .full-bleed {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     width: 100vw;
-    margin-left: calc(50% - 50vw);
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .full-bleed img {
+    max-width: 100%;
+    display: block;
   }
 
   .text-text {
